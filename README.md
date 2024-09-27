@@ -1,7 +1,7 @@
 # Retriever
 
 
-An old project for quick searching really huge text files, the code is a mess with a lot unfinished features and experiments but it actually works in a brute force kind of way. And it has some weird features that are useful sometimes, like searching between limiters (like {}, (), etc), returning a whole line and a range of characters ignoring lines. 
+An old project for quick searching really huge text files, the code is a mess with a lot unfinished features and experiments but it actually works in a brute force kind of way. And it has some weird features that are useful sometimes, like searching between limiters (like {}, (), etc), the positions of the search term in the file and returning a whole line and a range of characters ignoring lines. 
 
 It's so simple, that just for fun I once tested in OpenWatcom and was able to compile it all the way to ancient MS-DOS versions and Windows 3.1. I might do that again one of these days, but I need to set up a lot of virtual machines for that. 
 

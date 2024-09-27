@@ -5,7 +5,7 @@ An old project for quick searching really huge text files, the code is a mess wi
 
 It's so simple, that just for fun I once tested in OpenWatcom and was able to compile it all the way to ancient MS-DOS versions and Windows 3.1. I might do that again one of these days, but I need to set up a lot of virtual machines for that. 
 
-I stopped working on it when I discover that Silver Search existed (https://github.com/ggreer/the_silver_searcher) and nowadays I use ripgrep-all for most of my file searching needs (https://github.com/phiresky/ripgrep-all), so even if I had finished it would be kinda redundant.
+I stopped working on it when I discovered that Silver Search existed (https://github.com/ggreer/the_silver_searcher) and nowadays I use ripgrep-all for most of my file searching needs (https://github.com/phiresky/ripgrep-all), so even if I had finished it would be kinda redundant.
 
 
 I provided a release with the compiled executables, if like to run weird EXEs from the internet in your computer.

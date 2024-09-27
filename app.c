@@ -6,7 +6,6 @@
 * the portable library finderC.h. >>> TODO RENAME THIS
 *
 * Creator: Vinícius Souza
-* Email:   vinissou.git@gmail.com
 * Site:    https://github.com/vinissou
 ***********************************************************/
 

@@ -7,13 +7,11 @@
 * Observations: 
 * [INSERT BMH ALGOL REFS]
 * [uses Boyer-Moore-Horspool..]
-* [to learn more... blabla]
 * All the Boyer-Moore style functions were adapted from
 * the examples here: 
 * http://www-igm.univ-mlv.fr/~lecroq/string/node1.html
 *
-* Creator: Vinícius Silva de Souza
-* Email:   vinissou.git@gmail.com
+* Creator: Vinícius Souza
 * Site:    https://github.com/vinissou
 ***********************************************************/
 //With the search term list option the file will do a brute force search

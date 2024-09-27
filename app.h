@@ -6,7 +6,6 @@
 * functions from the portable library retriever.h.
 *
 * Creator: Vinícius Souza
-* Email:   vinissou.git@gmail.com
 * Site:    https://github.com/vinissou
 ***********************************************************/
 #include <stdio.h>

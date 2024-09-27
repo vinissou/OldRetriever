@@ -8,7 +8,6 @@
 * [SPECIFY HOW TO USE]
 *
 * Creator: Vinícius Souza
-* Email:   vinissou.git@gmail.com
 * Site:    https://github.com/vinissou
 ***********************************************************/
 #include <stdlib.h>

@@ -10,7 +10,6 @@
 * from the source file to the destine file or the stdout 
 *
 * Creator: Vinícius Souza
-* Email:   vinissou.git@gmail.com
 ***********************************************************/
 // TODO move all the fprintfs para outuput.h, so it can be 
 //      used as a module 

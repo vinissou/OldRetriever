@@ -1,0 +1,24 @@
+app.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+modules\output.c:42:5: error: Common realloc mistake: 'output_buffer' nulled but not freed upon failure [memleakOnRealloc]
+    output_buffer = realloc(output_buffer, OUTPUT_MAX);
+    ^
+modules\search.h:175:5: error: Common realloc mistake: 'good_suffix_ptr' nulled but not freed upon failure [memleakOnRealloc]
+    good_suffix_ptr = realloc(good_suffix_ptr, sizeof(g_suffix_table));
+    ^
+modules\search.h:250:15: error: Null pointer dereference: buffer [nullPointer]
+        fread(buffer, 1, (TERM.LENGHT -1), file);
+              ^
+modules\search.h:242:21: note: Assignment 'buffer=NULL', assigned value is 0
+    char * buffer = NULL;
+                    ^
+modules\search.h:250:15: note: Null pointer dereference
+        fread(buffer, 1, (TERM.LENGHT -1), file);
+              ^
+modules\search.h:250:15: error: Null pointer dereference [nullPointer]
+        fread(buffer, 1, (TERM.LENGHT -1), file);
+              ^
+modules\search.h:130:57: warning: Uninitialized variable: f [uninitvar]
+        if (i > g && suffix_table[i + term_lenght - 1 - f] < i - g)
+                                                        ^

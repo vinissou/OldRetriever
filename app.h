@@ -13,11 +13,12 @@
 
 #include "modules/finderC.h"
 
+#define false 0
+#define true  1
 
 struct options_status {
+    short DEBUG;
     short COUNT;
-    short BOYER_MOORE;
-    short HORSPOOL;
     short LIMITERS;
     short LINES;
     short OUTPUT;

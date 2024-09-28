@@ -1,27 +1,10 @@
 /***********************************************************
 * Name: app.c
 *
-* Function: 
-* Is the executable program that calls the functions from 
-* the portable library finderC.h. >>> TODO RENAME THIS
-*
 * Creator: Vinícius Souza
 * Site:    https://github.com/vinissou
 ***********************************************************/
 
-//     CHECKED > limiters, lines, positions and range seem to be 
-//               working fine
-//
-//TODO add lines counting to the program and return it with
-//     --positions >>> character number: XXXXX  line: XXXXX 
-//     >also rename the position output in all functions to
-//      char position, or somehting like that 
-//
-//TODO do something with -bm and -bmh >>> they are just 
-//     place-holders now 
-//TODO --limiters="xx","xx" >>> put this on the --help
-//
-//TODO add the a zero bytes source file check???
 
 
 #include "app.h"
@@ -76,8 +59,6 @@ void ParseCmdLine(int argc, char *argv[])
     }
 
 
-
-
     InitTerm(argv[2]);
     TERM.CHECK = 0; // TODO bm stuff, verify this >>> probably it needs 
                     //      to be eliminated 
@@ -88,11 +69,8 @@ void ParseCmdLine(int argc, char *argv[])
     //TODO deal with unrecognize options like dest files without the -o
     //TODO combine --positions with other options
     for(int tmp = 1; tmp < argc; tmp++){
-        if(strcmp(argv[tmp], "-bm") == 0)
-            OPTIONS.BOYER_MOORE = tmp;
-
-        if(strcmp(argv[tmp], "-bmh") == 0)
-            OPTIONS.HORSPOOL = tmp;
+        if(strcmp(argv[tmp], "-db") == 0)
+            OPTIONS.DEBUG = true;
 
         if(strcmp(argv[tmp], "-c")      == 0|| 
            strcmp(argv[tmp], "--count") == 0)
@@ -116,13 +94,12 @@ void ParseCmdLine(int argc, char *argv[])
         if(strstr(argv[tmp], "--range=") != NULL)
             OPTIONS.RANGE = tmp;
 
-        else if(OPTIONS.BOYER_MOORE == 0 &&  
-                OPTIONS.COUNT       == 0 && 
-                OPTIONS.HORSPOOL    == 0 && 
-                OPTIONS.LIMITERS    == 0 && 
-                OPTIONS.LINES       == 0 && 
-                OPTIONS.POSITIONS   == 0 && 
-                OPTIONS.RANGE       == 0 ){
+        else if(OPTIONS.DEBUG      == 0 &&  
+                OPTIONS.COUNT      == 0 && 
+                OPTIONS.LIMITERS   == 0 && 
+                OPTIONS.LINES      == 0 && 
+                OPTIONS.POSITIONS  == 0 && 
+                OPTIONS.RANGE      == 0 ){
             fprintf(stdout, "\nOption not recognized\n");
             exit(EXIT_FAILURE);
         }
@@ -141,27 +118,16 @@ void ParseCmdLine(int argc, char *argv[])
 
 
     //////temp//////////
-    TEMPdebug(argc, argv);
     //////temp//////////
 
 
-    //TODO explain why you let everything as if >>> mudar para case???
-    if(OPTIONS.BOYER_MOORE > 0)
-        printf("\nBM!!\n");
+    //TODO change to a switch case???
+    if(OPTIONS.DEBUG > 0)
+        TEMPdebug(argc, argv);
     if(OPTIONS.COUNT > 0){//TODO add dest file headers
         OUTPUT_STDOUT = 0;
         CountOccurrences(SOURCE.PTR, TERM.STR);//TODO todo rename this 
     }
-    if(OPTIONS.HORSPOOL > 0){
-        OUTPUT_STDOUT = 0;
-        while(HorspoolFile(SOURCE.PTR, SOURCE.SIZE, TERM.STR, TERM.LENGHT) != -1){
-            TERM.MATCHES++;
-            ReturnResults(SOURCE.POSITION, TERM.MATCHES);
-        }
-        ReturnTotal(DEST.PTR, TERM.MATCHES);
-    }
-    //TODO AA move this options for advanced????
-    
 
     if(OPTIONS.LINES > 0)
         CopyLineResults(SOURCE.PTR, DEST.PTR, TERM.STR);
@@ -169,7 +135,7 @@ void ParseCmdLine(int argc, char *argv[])
     if(OPTIONS.POSITIONS > 0)
         CopyPositions(SOURCE.PTR, DEST.PTR, TERM.STR);
     
-    if(OPTIONS.RANGE > 0){//TODO consertar pega um -1 no começo
+    if(OPTIONS.RANGE > 0){//TODO fix -1? already fixed? 
         long long number = 0;                          
         char *buffer = malloc(strlen(argv[OPTIONS.RANGE]));
         sscanf(argv[OPTIONS.RANGE], "%8s %lld", buffer, &number);
@@ -220,6 +186,7 @@ const char *help =  //TODO expand with all current options
     "\nHELP"
     "\n--------------------------------------------------------------"
     "\nUSAGE: retriever --option \"searchterm\" source destination\n"
+                "\nDEBUG       -db (it needs to at the end, for now)" 
                 "\nLINES       -l "
                 "\nPOSITIONS   -p "
                 "\nCOUNT       -c"
@@ -232,8 +199,7 @@ const char *help =  //TODO expand with all current options
 
 
 
-///////////////temp////////////////////////
-//TODO add this as a debug option
+//TODO remove from this file? 
 void TEMPdebug(int argc, char *argv[])
 {
 
@@ -247,6 +213,7 @@ void TEMPdebug(int argc, char *argv[])
     printf("\nFILE SIZE: %lld", SOURCE.SIZE);
     printf("\nFILE NAME: %s\n",   SOURCE.NAME);
     
+   // TODO Old junk that needs to be checked VVVV 
    // InitTerm("film"); 
    // char *text = "iiiiiiiiiiiiiiiifilmasddasdsdadsadasd";
    // printf("\nTERM:%s TERM_SIZE: %lu text:%s text_size:%lu \n", 

@@ -1,4 +1,4 @@
-# Retriever
+# OldRetriever
 
 
 An old project for quick searching really huge text files, the code is a mess with a lot unfinished features and experiments but it actually works in a brute force kind of way. And it has some weird features that are useful sometimes, like searching between limiters (like {}, (), etc), the positions of the search term in the file and returning a whole line and a range of characters ignoring lines. 

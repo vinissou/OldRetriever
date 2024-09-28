@@ -8,7 +8,7 @@ It's so simple, that just for fun I once tested in OpenWatcom and was able to co
 I stopped working on it when I discovered that Silver Search existed (https://github.com/ggreer/the_silver_searcher) and nowadays I use ripgrep-all for most of my file searching needs (https://github.com/phiresky/ripgrep-all), so even if I had finished it would be kinda redundant.
 
 
-I provided a release with the compiled executables, if like to run weird EXEs from the internet in your computer.
+I provided a release with the compiled executables, if you like to run weird EXEs from the internet in your computer.
 
 For building on Windows: I recommend using the mingw-winlibs-llvm-ucrt package from Scoop, it's the most painless way to install compilers on Windows. 
 

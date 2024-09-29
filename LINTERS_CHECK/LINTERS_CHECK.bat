@@ -1,2 +1,3 @@
-Clang-Tidy  -extra-arg=-std=c99 ..\app.c >> .\TODO_CLANG-TIDY.txt
-cppcheck ..\app.c --output-file=TODO_CPPCHECK.txt
+del *.txt
+Clang-Tidy  -extra-arg=-std=c99 ..\src\app.c >> .\TODO_CLANG-TIDY.txt
+cppcheck ..\src\app.c --output-file=TODO_CPPCHECK.txt

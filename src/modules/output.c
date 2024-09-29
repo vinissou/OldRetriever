@@ -27,7 +27,7 @@
 /// TODO change it to a struct 
 // bugs output in openbsd if not checked
 // it needs to become an arg option
-unsigned long long  OUTPUT_MAX    = 20000; //TODO change for a dynamic value 
+unsigned long long  OUTPUT_MAX    = 200000; //TODO change for a dynamic value 
 short int  OUTPUT_STDOUT = 0;
 short int  OUTPUT_RETURN = 0; //implement return option
 
@@ -51,7 +51,7 @@ char *ReturnOutput(FILE *file, const char *fmt, ...) //eliminate it?
     va_end(arg);
 
     if(output_size < OUTPUT_MAX){
-        snprintf(output_buffer, output_size,"%s", output_buffer);
+        snprintf(output_buffer, output_size+1,"%s", output_buffer);
     }
     
     //TODO fix this VVV change it to a flag??

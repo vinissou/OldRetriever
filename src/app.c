@@ -3,7 +3,9 @@
  *
  * Creator: Vinícius Souza
  * Site:    https://github.com/vinissou
- ***********************************************************/
+ *
+ * TODO: make it multifile and recursive
+***********************************************************/
 
 #include "app.h"
 

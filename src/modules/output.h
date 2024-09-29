@@ -30,7 +30,7 @@
     #define CURSOR_OFF "\033[?25h"
 #endif
 
-extern long long  OUTPUT_MAX;
+extern unsigned long long  OUTPUT_MAX;
 extern short int  OUTPUT_STDOUT;
 extern short int  OUTPUT_RETURN;
 

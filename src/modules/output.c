@@ -24,11 +24,12 @@
 //TODO function to get the date from the system
 //TODO implement a --silent and --verbose modes flags here
 
-///TODO change it to a struct 
-//bugs output in openbsd
-long long OUTPUT_MAX    = 1000000; //TODO change for a dynamic value 
-short int     OUTPUT_STDOUT = 0;
-short int     OUTPUT_RETURN = 0; //implement return option
+/// TODO change it to a struct 
+// bugs output in openbsd if not checked
+// it needs to become an arg option
+unsigned long long  OUTPUT_MAX    = 20000; //TODO change for a dynamic value 
+short int  OUTPUT_STDOUT = 0;
+short int  OUTPUT_RETURN = 0; //implement return option
 
 //TODO VVV does it need to be static???
 static char *output_buffer = NULL;
@@ -40,16 +41,22 @@ static char *output_buffer = NULL;
 //TODO this is used in copy.h, FIX THIS >>> copy it there
 char *ReturnOutput(FILE *file, const char *fmt, ...) //eliminate it? 
 {
-    output_buffer = realloc(output_buffer, OUTPUT_MAX);
+    unsigned long long output_size = 0;
     va_list arg;
 
+    output_buffer = realloc(output_buffer, OUTPUT_MAX);
+
     va_start(arg, fmt);
-    vsnprintf(output_buffer, OUTPUT_MAX, fmt, arg);
+    output_size = vsnprintf(output_buffer, OUTPUT_MAX, fmt, arg);
     va_end(arg);
+
+    if(output_size < OUTPUT_MAX){
+        snprintf(output_buffer, output_size,"%s", output_buffer);
+    }
     
     //TODO fix this VVV change it to a flag??
     //TODO you need to account for the --verbose
-    //     even when it is printing to a file
+    //     even when it is printing to a file??
     if(file != NULL){
         fprintf(file ,"%s" ,output_buffer);
     }

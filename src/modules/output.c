@@ -25,6 +25,7 @@
 //TODO implement a --silent and --verbose modes flags here
 
 ///TODO change it to a struct 
+//bugs output in openbsd
 long long OUTPUT_MAX    = 1000000; //TODO change for a dynamic value 
 short int     OUTPUT_STDOUT = 0;
 short int     OUTPUT_RETURN = 0; //implement return option

@@ -191,7 +191,7 @@ void CopyLineResults(FILE *source,
                      FILE *destination, 
                      const char *term)
 {
-    long long previous_position  = 0;
+    long long previous_position  = 0; //check this, it's not used?
     long long begin_position     = 0;
     long long end_position       = 0;
 

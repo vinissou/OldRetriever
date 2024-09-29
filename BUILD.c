@@ -17,13 +17,11 @@
 //this will become a compiler selector in the future
 //might add cl one day
 #if defined(_WIN32) || defined(_WIN64) 
-    #define OUT retriever.exe
     char *compiler = "clang";
     char *os = "WIN32";
     char *input = ".\\src\\app.c";
     char *output = "retriever.exe";
-#else
-    #define OUT retriever
+#else //for now
     char *compiler = "cc";
     char *os = "else"; //for now
     char *input = "./src/app.c";

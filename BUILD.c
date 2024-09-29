@@ -4,6 +4,11 @@
 * Experimental C only buid system, idea inspired by: 
 * https://github.com/tsoding
 *
+* TODO change to a header for each target plataform
+*      when it gets more complex??
+* TODO check args for target platform and bits, if no 
+*      if no arg is provided it will build for the current
+*      one
 *
 * Creator: Vinícius Souza
 * Site:    https://github.com/vinissou

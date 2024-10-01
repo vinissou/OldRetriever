@@ -13,7 +13,10 @@ I provided a release with the compiled executables, if you like to run weird EXE
 
 
 ## Building 
-In Windows, Linux or BSDs¹, just compile BUILD.c and run it. More systems will be added later.
+In Windows, Linux or BSDs¹, just compile BUILD.c and run it. 
+
+More systems will be added later.
+
 For building on Windows: I recommend using the mingw-winlibs-llvm-ucrt package from Scoop, it's the most painless way to install compilers on Windows. 
 
 ¹NetBSD and OpenBSD have some minor I/O problems that I'm working on.

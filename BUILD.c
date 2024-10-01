@@ -22,7 +22,7 @@
 //this will become a compiler selector in the future
 //might add cl one day
 #if defined(_WIN32) || defined(_WIN64) 
-    char *compiler = "clang";
+    char *compiler = "gcc";
     char *os = "WIN32";
     char *input = ".\\src\\app.c";
     char *output = "retriever.exe";

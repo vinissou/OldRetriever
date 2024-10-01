@@ -15,6 +15,8 @@
 * Site:    https://github.com/vinissou
 ***********************************************************/
 //With the search term list option the file will do a brute force search
+// TODO create case sensitive option
+// TODO change the checking to true and false
 
 /* TODO TODO CREATE CALLER FUNCTIONS TO CALL INIT_TERM AND TODO TODO*/
 /* TODO TODO THE OTHER FUNCTIONS                           TODO TODO*/

@@ -9,6 +9,8 @@
 * TODO check args for target platform and bits, if no 
 *      if no arg is provided it will build for the current
 *      one
+* TODO add auto zip release for Linux, because debian won't
+*      run the executable if it was compressed in Windows
 *
 * Creator: Vinícius Souza
 * Site:    https://github.com/vinissou

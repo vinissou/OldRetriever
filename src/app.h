@@ -9,8 +9,8 @@
  * Creator: Vinícius Souza
  * Site:    https://github.com/vinissou
  ***********************************************************/
-#if defined(_WIN32) || defined(_WIN64)
-#define _CRT_SECURE_NO_WARNINGS
+#if defined(_WIN32) || defined(_WIN64) 
+#define _CRT_SECURE_NO_WARNINGS //when UCRT is not installed
 #endif
 
 #include <errno.h>

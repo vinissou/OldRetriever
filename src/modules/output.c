@@ -51,7 +51,7 @@ char *ReturnOutput(FILE *file, const char *fmt, ...) //eliminate it?
     va_end(arg);
 
     if(output_size < OUTPUT_MAX){
-        snprintf(output_buffer, output_size+1,"%s", output_buffer);
+        output_buffer = realloc(output_buffer, output_size);
     }
     
     //TODO fix this VVV change it to a flag??

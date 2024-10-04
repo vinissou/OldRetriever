@@ -21,7 +21,7 @@
 /* TODO TODO CREATE CALLER FUNCTIONS TO CALL INIT_TERM AND TODO TODO*/
 /* TODO TODO THE OTHER FUNCTIONS                           TODO TODO*/
 
-// TODO deal with all the ENOENT here 
+// TODO deal with all the ENOENT here
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -549,10 +549,15 @@ char *ReturnPositionRange(FILE *file, const long long begin_position,
 
     buffer = malloc(range_size);
     fseek(file, begin_position, SEEK_SET);
-    fread(buffer, 1, range_size, file);
+    int f_check = fread(buffer, 1, range_size, file);
     fseek(file, current_position, SEEK_SET);
 
-    return buffer;
+    if (f_check != 0) {
+        return buffer;
+    } else {
+        return "\nFILE ERROR\n";
+        // change to  >> return ENOENT; << later
+    }
 }
 
 /***********************************************************

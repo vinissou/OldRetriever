@@ -28,12 +28,12 @@
 char *compiler = "gcc";
 char *os = "WIN32";
 char *input = ".\\src\\app.c";
-char *output = "retriever.exe";
+char *output = ".\\build\\retriever.exe";
 #else // for now
 char *compiler = "cc";
 char *os = "else"; // for now
 char *input = "./src/app.c";
-char *output = "retriever";
+char *output = "./build/retriever";
 #endif
 
 int main(int argc, char **argv) {

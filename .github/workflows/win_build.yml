@@ -46,3 +46,8 @@ jobs:
       # See https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference
       #run: msbuild /m /p:Configuration=${{env.BUILD_CONFIGURATION}} ${{env.SOLUTION_FILE_PATH}}
       run: clang BUILD.c && .\a.exe
+
+    - name: testing executable
+      run: .\build\retriever --help
+
+

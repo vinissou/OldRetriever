@@ -191,7 +191,7 @@ void CopyLineResults(FILE *source,
                      FILE *destination, 
                      const char *term)
 {
-    long long previous_position  = 0; //check this, it's not used?
+    //long long previous_position  = 0; //check this, it's not used?
     long long begin_position     = 0;
     long long end_position       = 0;
 
@@ -205,7 +205,7 @@ void CopyLineResults(FILE *source,
             break;
         if (SOURCE.POSITION < end_position){
             long long difference = (end_position - SOURCE.POSITION);
-            previous_position = (SOURCE.POSITION + difference);
+            //previous_position = (SOURCE.POSITION + difference);
             AdvanceFile(source, difference);
             continue;
         }

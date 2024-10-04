@@ -44,7 +44,7 @@ int main(int argc, char **argv) {
         system("dos2unix modules/*");
     }
 
-    sprintf(command, "%s -Wall -Wextra -pedantic -std=c99 -O3 %s -o %s",
+    sprintf(command, "%s -Wall -Wextra -Werror -pedantic -std=c99 -O3 %s -o %s",
             compiler, input, output);
     printf("\n%s\n", command);
     system(command);

@@ -160,7 +160,11 @@ static void GoodSuffix(char *term, int term_lenght) {
     for (i = 0; i <= term_lenght - 2; ++i)
         g_suffix_table[term_lenght - 1 - suffix_table[i]] = term_lenght - 1 - i;
 
-    good_suffix_ptr = realloc(good_suffix_ptr, sizeof(g_suffix_table));
+    int *tmp_ptr = realloc(good_suffix_ptr, sizeof(g_suffix_table));
+    if (tmp_ptr == NULL){
+        free(tmp_ptr);
+    }
+
     memcpy(good_suffix_ptr, g_suffix_table, (int)sizeof(g_suffix_table));
     // TODO pass this pointer to a optional variable
 }

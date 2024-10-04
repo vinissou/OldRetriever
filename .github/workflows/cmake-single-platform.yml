@@ -27,5 +27,5 @@ jobs:
     - name: Test
       working-directory: ${{github.workspace}}
       # Execute tests defined by the CMake configuration.
-      run: ./build/retriever --help 
+      run: /build/retriever --help 
 

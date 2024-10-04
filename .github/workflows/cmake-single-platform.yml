@@ -22,11 +22,11 @@ jobs:
 
     - name: Build
       # Build your program with the given configuration
-      run: cc ./BUILD.c && ./a.out
+      run: apt install dos2unix && cc ./BUILD.c && ./a.out
 
     - name: Test
       #working-directory: ${{github.workspace}}
       # Execute tests defined by the CMake configuration.
-      #run: chmod -x ./build/retriever && ./build/retriever  --help 
-      run: find 
+      run: ./build/retriever --help 
+      #run: find 
 

@@ -3,6 +3,11 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
+
+# I tried to test with CL, but installing these VS tools are always a pain in the ass
+# and chocolatey seems to be down all the time, so even searching the packages is annoying
+# so I just used clang for now 
+
 name: Windows Build Test
 
 on:
@@ -40,4 +45,4 @@ jobs:
       # Add additional options to the MSBuild command line here (like platform or verbosity level).
       # See https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference
       #run: msbuild /m /p:Configuration=${{env.BUILD_CONFIGURATION}} ${{env.SOLUTION_FILE_PATH}}
-      run: clang BUILD.c && a.exe
+      run: clang BUILD.c && .\a.exe

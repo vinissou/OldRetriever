@@ -1,3 +1,5 @@
+[![Linux build test](https://github.com/vinissou/OldRetriever/actions/workflows/linux_test.yml/badge.svg)](https://github.com/vinissou/OldRetriever/actions/workflows/linux_test.yml)
+
 # OldRetriever
 
 

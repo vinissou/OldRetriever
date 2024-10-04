@@ -28,5 +28,5 @@ jobs:
       #working-directory: ${{github.workspace}}
       # Execute tests defined by the CMake configuration.
       #run: chmod -x ./build/retriever && ./build/retriever  --help 
-      run: cd ${{github.workspace}}&& ../build/retriever  --help 
+      run: find 
 

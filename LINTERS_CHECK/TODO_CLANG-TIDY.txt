@@ -1,1022 +1,959 @@
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:115:5: warning: Potential leak of memory pointed to by 'buffer' [clang-analyzer-unix.Malloc]
-  115 |     CopyRangeResults(SOURCE.PTR, DEST.PTR, TERM.STR, TERM.LENGHT, number);
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:117:5: warning: Potential leak of memory pointed to by 'buffer' [clang-analyzer-unix.Malloc]
+  117 |     CopyRangeResults(SOURCE.PTR, DEST.PTR, TERM.STR, TERM.LENGHT, number);
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:22:3: note: Calling 'ParseCmdLine'
-   22 |   ParseCmdLine(argc, argv);
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:24:3: note: Calling 'ParseCmdLine'
+   24 |   ParseCmdLine(argc, argv);
       |   ^~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:38:7: note: Assuming 'argc' is >= 2
-   38 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:40:7: note: Assuming 'argc' is >= 2
+   40 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
       |       ^~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:38:3: note: Taking false branch
-   38 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:40:3: note: Taking false branch
+   40 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:7: note: Assuming the condition is false
-   43 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:45:7: note: Assuming the condition is false
+   45 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
       |       ^~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:7: note: Left side of '||' is false
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:37: note: Assuming the condition is false
-   43 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:45:7: note: Left side of '||' is false
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:45:37: note: Assuming the condition is false
+   45 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
       |                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:3: note: Taking false branch
-   43 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:45:3: note: Taking false branch
+   45 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:57:21: note: 'tmp' is < 'argc'
-   57 |   for (int tmp = 1; tmp < argc; tmp++) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:59:21: note: 'tmp' is < 'argc'
+   59 |   for (int tmp = 1; tmp < argc; tmp++) {
       |                     ^~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:57:3: note: Loop condition is true.  Entering loop body
-   57 |   for (int tmp = 1; tmp < argc; tmp++) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:59:3: note: Loop condition is true.  Entering loop body
+   59 |   for (int tmp = 1; tmp < argc; tmp++) {
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:58:9: note: Assuming the condition is false
-   58 |     if (strcmp(argv[tmp], "-db") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:60:9: note: Assuming the condition is false
+   60 |     if (strcmp(argv[tmp], "-db") == 0)
       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:58:5: note: Taking false branch
-   58 |     if (strcmp(argv[tmp], "-db") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:60:5: note: Taking false branch
+   60 |     if (strcmp(argv[tmp], "-db") == 0)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:61:9: note: Assuming the condition is false
-   61 |     if (strcmp(argv[tmp], "-c") == 0 || strcmp(argv[tmp], "--count") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:63:9: note: Assuming the condition is false
+   63 |     if (strcmp(argv[tmp], "-c") == 0 || strcmp(argv[tmp], "--count") == 0)
       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:61:9: note: Left side of '||' is false
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:61:41: note: Assuming the condition is false
-   61 |     if (strcmp(argv[tmp], "-c") == 0 || strcmp(argv[tmp], "--count") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:63:9: note: Left side of '||' is false
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:63:41: note: Assuming the condition is false
+   63 |     if (strcmp(argv[tmp], "-c") == 0 || strcmp(argv[tmp], "--count") == 0)
       |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:61:5: note: Taking false branch
-   61 |     if (strcmp(argv[tmp], "-c") == 0 || strcmp(argv[tmp], "--count") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:63:5: note: Taking false branch
+   63 |     if (strcmp(argv[tmp], "-c") == 0 || strcmp(argv[tmp], "--count") == 0)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:64:9: note: Assuming the condition is false
-   64 |     if (strstr(argv[tmp], "--limiters=") != NULL)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:66:9: note: Assuming the condition is false
+   66 |     if (strstr(argv[tmp], "--limiters=") != NULL)
       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:64:5: note: Taking false branch
-   64 |     if (strstr(argv[tmp], "--limiters=") != NULL)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:66:5: note: Taking false branch
+   66 |     if (strstr(argv[tmp], "--limiters=") != NULL)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:67:9: note: Assuming the condition is false
-   67 |     if (strcmp(argv[tmp], "-l") == 0 || strcmp(argv[tmp], "--lines") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:69:9: note: Assuming the condition is false
+   69 |     if (strcmp(argv[tmp], "-l") == 0 || strcmp(argv[tmp], "--lines") == 0)
       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:67:9: note: Left side of '||' is false
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:67:41: note: Assuming the condition is false
-   67 |     if (strcmp(argv[tmp], "-l") == 0 || strcmp(argv[tmp], "--lines") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:69:9: note: Left side of '||' is false
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:69:41: note: Assuming the condition is false
+   69 |     if (strcmp(argv[tmp], "-l") == 0 || strcmp(argv[tmp], "--lines") == 0)
       |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:67:5: note: Taking false branch
-   67 |     if (strcmp(argv[tmp], "-l") == 0 || strcmp(argv[tmp], "--lines") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:69:5: note: Taking false branch
+   69 |     if (strcmp(argv[tmp], "-l") == 0 || strcmp(argv[tmp], "--lines") == 0)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:70:9: note: Assuming the condition is false
-   70 |     if (strcmp(argv[tmp], "-o") == 0 || strcmp(argv[tmp], "--output") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:72:9: note: Assuming the condition is false
+   72 |     if (strcmp(argv[tmp], "-o") == 0 || strcmp(argv[tmp], "--output") == 0)
       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:70:9: note: Left side of '||' is false
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:70:41: note: Assuming the condition is false
-   70 |     if (strcmp(argv[tmp], "-o") == 0 || strcmp(argv[tmp], "--output") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:72:9: note: Left side of '||' is false
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:72:41: note: Assuming the condition is false
+   72 |     if (strcmp(argv[tmp], "-o") == 0 || strcmp(argv[tmp], "--output") == 0)
       |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:70:5: note: Taking false branch
-   70 |     if (strcmp(argv[tmp], "-o") == 0 || strcmp(argv[tmp], "--output") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:72:5: note: Taking false branch
+   72 |     if (strcmp(argv[tmp], "-o") == 0 || strcmp(argv[tmp], "--output") == 0)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:73:9: note: Assuming the condition is false
-   73 |     if (strcmp(argv[tmp], "-p") == 0 || strcmp(argv[tmp], "--positions") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:75:9: note: Assuming the condition is false
+   75 |     if (strcmp(argv[tmp], "-p") == 0 || strcmp(argv[tmp], "--positions") == 0)
       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:73:9: note: Left side of '||' is false
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:73:41: note: Assuming the condition is false
-   73 |     if (strcmp(argv[tmp], "-p") == 0 || strcmp(argv[tmp], "--positions") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:75:9: note: Left side of '||' is false
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:75:41: note: Assuming the condition is false
+   75 |     if (strcmp(argv[tmp], "-p") == 0 || strcmp(argv[tmp], "--positions") == 0)
       |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:73:5: note: Taking false branch
-   73 |     if (strcmp(argv[tmp], "-p") == 0 || strcmp(argv[tmp], "--positions") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:75:5: note: Taking false branch
+   75 |     if (strcmp(argv[tmp], "-p") == 0 || strcmp(argv[tmp], "--positions") == 0)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:76:9: note: Assuming the condition is false
-   76 |     if (strstr(argv[tmp], "--range=") != NULL)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:78:9: note: Assuming the condition is false
+   78 |     if (strstr(argv[tmp], "--range=") != NULL)
       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:76:5: note: Taking false branch
-   76 |     if (strstr(argv[tmp], "--range=") != NULL)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:78:5: note: Taking false branch
+   78 |     if (strstr(argv[tmp], "--range=") != NULL)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:79:14: note: Assuming field 'DEBUG' is not equal to 0
-   79 |     else if (OPTIONS.DEBUG == 0 && OPTIONS.COUNT == 0 &&
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:81:14: note: Assuming field 'DEBUG' is not equal to 0
+   81 |     else if (OPTIONS.DEBUG == 0 && OPTIONS.COUNT == 0 &&
       |              ^~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:79:33: note: Left side of '&&' is false
-   79 |     else if (OPTIONS.DEBUG == 0 && OPTIONS.COUNT == 0 &&
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:81:33: note: Left side of '&&' is false
+   81 |     else if (OPTIONS.DEBUG == 0 && OPTIONS.COUNT == 0 &&
       |                                 ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:57:21: note: Assuming 'tmp' is >= 'argc'
-   57 |   for (int tmp = 1; tmp < argc; tmp++) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:59:21: note: Assuming 'tmp' is >= 'argc'
+   59 |   for (int tmp = 1; tmp < argc; tmp++) {
       |                     ^~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:57:3: note: Loop condition is false. Execution continues on line 88
-   57 |   for (int tmp = 1; tmp < argc; tmp++) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:59:3: note: Loop condition is false. Execution continues on line 90
+   59 |   for (int tmp = 1; tmp < argc; tmp++) {
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:89:7: note: Assuming field 'OUTPUT' is <= 0
-   89 |   if (OPTIONS.OUTPUT > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:91:7: note: Assuming field 'OUTPUT' is <= 0
+   91 |   if (OPTIONS.OUTPUT > 0)
       |       ^~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:89:3: note: Taking false branch
-   89 |   if (OPTIONS.OUTPUT > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:91:3: note: Taking false branch
+   91 |   if (OPTIONS.OUTPUT > 0)
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:98:7: note: Assuming field 'DEBUG' is <= 0
-   98 |   if (OPTIONS.DEBUG > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:100:7: note: Assuming field 'DEBUG' is <= 0
+  100 |   if (OPTIONS.DEBUG > 0)
       |       ^~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:98:3: note: Taking false branch
-   98 |   if (OPTIONS.DEBUG > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:100:3: note: Taking false branch
+  100 |   if (OPTIONS.DEBUG > 0)
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:100:7: note: Assuming field 'COUNT' is <= 0
-  100 |   if (OPTIONS.COUNT > 0) { // TODO add dest file headers
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:102:7: note: Assuming field 'COUNT' is <= 0
+  102 |   if (OPTIONS.COUNT > 0) { // TODO add dest file headers
       |       ^~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:100:3: note: Taking false branch
-  100 |   if (OPTIONS.COUNT > 0) { // TODO add dest file headers
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:102:3: note: Taking false branch
+  102 |   if (OPTIONS.COUNT > 0) { // TODO add dest file headers
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:105:7: note: Assuming field 'LINES' is <= 0
-  105 |   if (OPTIONS.LINES > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:107:7: note: Assuming field 'LINES' is <= 0
+  107 |   if (OPTIONS.LINES > 0)
       |       ^~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:105:3: note: Taking false branch
-  105 |   if (OPTIONS.LINES > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:107:3: note: Taking false branch
+  107 |   if (OPTIONS.LINES > 0)
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:108:7: note: Assuming field 'POSITIONS' is <= 0
-  108 |   if (OPTIONS.POSITIONS > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:110:7: note: Assuming field 'POSITIONS' is <= 0
+  110 |   if (OPTIONS.POSITIONS > 0)
       |       ^~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:108:3: note: Taking false branch
-  108 |   if (OPTIONS.POSITIONS > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:110:3: note: Taking false branch
+  110 |   if (OPTIONS.POSITIONS > 0)
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:111:7: note: Assuming field 'RANGE' is > 0
-  111 |   if (OPTIONS.RANGE > 0) { // TODO fix -1? already fixed?
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:113:7: note: Assuming field 'RANGE' is > 0
+  113 |   if (OPTIONS.RANGE > 0) { // TODO fix -1? already fixed?
       |       ^~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:111:3: note: Taking true branch
-  111 |   if (OPTIONS.RANGE > 0) { // TODO fix -1? already fixed?
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:113:3: note: Taking true branch
+  113 |   if (OPTIONS.RANGE > 0) { // TODO fix -1? already fixed?
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:113:20: note: Memory is allocated
-  113 |     char *buffer = malloc(strlen(argv[OPTIONS.RANGE]));
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:115:20: note: Memory is allocated
+  115 |     char *buffer = malloc(strlen(argv[OPTIONS.RANGE]));
       |                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:115:5: note: Potential leak of memory pointed to by 'buffer'
-  115 |     CopyRangeResults(SOURCE.PTR, DEST.PTR, TERM.STR, TERM.LENGHT, number);
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:117:5: note: Potential leak of memory pointed to by 'buffer'
+  117 |     CopyRangeResults(SOURCE.PTR, DEST.PTR, TERM.STR, TERM.LENGHT, number);
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:126:5: warning: Potential leak of memory pointed to by 'buffer1' [clang-analyzer-unix.Malloc]
-  126 |     CopyLimitersResults(SOURCE.PTR, DEST.PTR, TERM.STR, buffer0, buffer1);
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:128:5: warning: Potential leak of memory pointed to by 'buffer1' [clang-analyzer-unix.Malloc]
+  128 |     CopyLimitersResults(SOURCE.PTR, DEST.PTR, TERM.STR, buffer0, buffer1);
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:22:3: note: Calling 'ParseCmdLine'
-   22 |   ParseCmdLine(argc, argv);
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:24:3: note: Calling 'ParseCmdLine'
+   24 |   ParseCmdLine(argc, argv);
       |   ^~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:38:7: note: Assuming 'argc' is >= 2
-   38 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:40:7: note: Assuming 'argc' is >= 2
+   40 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
       |       ^~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:38:3: note: Taking false branch
-   38 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:40:3: note: Taking false branch
+   40 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:7: note: Assuming the condition is false
-   43 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:45:7: note: Assuming the condition is false
+   45 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
       |       ^~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:7: note: Left side of '||' is false
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:37: note: Assuming the condition is false
-   43 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:45:7: note: Left side of '||' is false
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:45:37: note: Assuming the condition is false
+   45 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
       |                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:3: note: Taking false branch
-   43 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:45:3: note: Taking false branch
+   45 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:57:21: note: 'tmp' is < 'argc'
-   57 |   for (int tmp = 1; tmp < argc; tmp++) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:59:21: note: 'tmp' is < 'argc'
+   59 |   for (int tmp = 1; tmp < argc; tmp++) {
       |                     ^~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:57:3: note: Loop condition is true.  Entering loop body
-   57 |   for (int tmp = 1; tmp < argc; tmp++) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:59:3: note: Loop condition is true.  Entering loop body
+   59 |   for (int tmp = 1; tmp < argc; tmp++) {
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:58:9: note: Assuming the condition is false
-   58 |     if (strcmp(argv[tmp], "-db") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:60:9: note: Assuming the condition is false
+   60 |     if (strcmp(argv[tmp], "-db") == 0)
       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:58:5: note: Taking false branch
-   58 |     if (strcmp(argv[tmp], "-db") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:60:5: note: Taking false branch
+   60 |     if (strcmp(argv[tmp], "-db") == 0)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:61:9: note: Assuming the condition is false
-   61 |     if (strcmp(argv[tmp], "-c") == 0 || strcmp(argv[tmp], "--count") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:63:9: note: Assuming the condition is false
+   63 |     if (strcmp(argv[tmp], "-c") == 0 || strcmp(argv[tmp], "--count") == 0)
       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:61:9: note: Left side of '||' is false
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:61:41: note: Assuming the condition is false
-   61 |     if (strcmp(argv[tmp], "-c") == 0 || strcmp(argv[tmp], "--count") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:63:9: note: Left side of '||' is false
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:63:41: note: Assuming the condition is false
+   63 |     if (strcmp(argv[tmp], "-c") == 0 || strcmp(argv[tmp], "--count") == 0)
       |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:61:5: note: Taking false branch
-   61 |     if (strcmp(argv[tmp], "-c") == 0 || strcmp(argv[tmp], "--count") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:63:5: note: Taking false branch
+   63 |     if (strcmp(argv[tmp], "-c") == 0 || strcmp(argv[tmp], "--count") == 0)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:64:9: note: Assuming the condition is false
-   64 |     if (strstr(argv[tmp], "--limiters=") != NULL)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:66:9: note: Assuming the condition is false
+   66 |     if (strstr(argv[tmp], "--limiters=") != NULL)
       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:64:5: note: Taking false branch
-   64 |     if (strstr(argv[tmp], "--limiters=") != NULL)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:66:5: note: Taking false branch
+   66 |     if (strstr(argv[tmp], "--limiters=") != NULL)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:67:9: note: Assuming the condition is false
-   67 |     if (strcmp(argv[tmp], "-l") == 0 || strcmp(argv[tmp], "--lines") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:69:9: note: Assuming the condition is false
+   69 |     if (strcmp(argv[tmp], "-l") == 0 || strcmp(argv[tmp], "--lines") == 0)
       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:67:9: note: Left side of '||' is false
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:67:41: note: Assuming the condition is false
-   67 |     if (strcmp(argv[tmp], "-l") == 0 || strcmp(argv[tmp], "--lines") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:69:9: note: Left side of '||' is false
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:69:41: note: Assuming the condition is false
+   69 |     if (strcmp(argv[tmp], "-l") == 0 || strcmp(argv[tmp], "--lines") == 0)
       |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:67:5: note: Taking false branch
-   67 |     if (strcmp(argv[tmp], "-l") == 0 || strcmp(argv[tmp], "--lines") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:69:5: note: Taking false branch
+   69 |     if (strcmp(argv[tmp], "-l") == 0 || strcmp(argv[tmp], "--lines") == 0)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:70:9: note: Assuming the condition is false
-   70 |     if (strcmp(argv[tmp], "-o") == 0 || strcmp(argv[tmp], "--output") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:72:9: note: Assuming the condition is false
+   72 |     if (strcmp(argv[tmp], "-o") == 0 || strcmp(argv[tmp], "--output") == 0)
       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:70:9: note: Left side of '||' is false
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:70:41: note: Assuming the condition is false
-   70 |     if (strcmp(argv[tmp], "-o") == 0 || strcmp(argv[tmp], "--output") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:72:9: note: Left side of '||' is false
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:72:41: note: Assuming the condition is false
+   72 |     if (strcmp(argv[tmp], "-o") == 0 || strcmp(argv[tmp], "--output") == 0)
       |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:70:5: note: Taking false branch
-   70 |     if (strcmp(argv[tmp], "-o") == 0 || strcmp(argv[tmp], "--output") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:72:5: note: Taking false branch
+   72 |     if (strcmp(argv[tmp], "-o") == 0 || strcmp(argv[tmp], "--output") == 0)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:73:9: note: Assuming the condition is false
-   73 |     if (strcmp(argv[tmp], "-p") == 0 || strcmp(argv[tmp], "--positions") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:75:9: note: Assuming the condition is false
+   75 |     if (strcmp(argv[tmp], "-p") == 0 || strcmp(argv[tmp], "--positions") == 0)
       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:73:9: note: Left side of '||' is false
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:73:41: note: Assuming the condition is false
-   73 |     if (strcmp(argv[tmp], "-p") == 0 || strcmp(argv[tmp], "--positions") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:75:9: note: Left side of '||' is false
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:75:41: note: Assuming the condition is false
+   75 |     if (strcmp(argv[tmp], "-p") == 0 || strcmp(argv[tmp], "--positions") == 0)
       |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:73:5: note: Taking false branch
-   73 |     if (strcmp(argv[tmp], "-p") == 0 || strcmp(argv[tmp], "--positions") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:75:5: note: Taking false branch
+   75 |     if (strcmp(argv[tmp], "-p") == 0 || strcmp(argv[tmp], "--positions") == 0)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:76:9: note: Assuming the condition is false
-   76 |     if (strstr(argv[tmp], "--range=") != NULL)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:78:9: note: Assuming the condition is false
+   78 |     if (strstr(argv[tmp], "--range=") != NULL)
       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:76:5: note: Taking false branch
-   76 |     if (strstr(argv[tmp], "--range=") != NULL)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:78:5: note: Taking false branch
+   78 |     if (strstr(argv[tmp], "--range=") != NULL)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:79:14: note: Assuming field 'DEBUG' is not equal to 0
-   79 |     else if (OPTIONS.DEBUG == 0 && OPTIONS.COUNT == 0 &&
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:81:14: note: Assuming field 'DEBUG' is not equal to 0
+   81 |     else if (OPTIONS.DEBUG == 0 && OPTIONS.COUNT == 0 &&
       |              ^~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:79:33: note: Left side of '&&' is false
-   79 |     else if (OPTIONS.DEBUG == 0 && OPTIONS.COUNT == 0 &&
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:81:33: note: Left side of '&&' is false
+   81 |     else if (OPTIONS.DEBUG == 0 && OPTIONS.COUNT == 0 &&
       |                                 ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:57:21: note: Assuming 'tmp' is >= 'argc'
-   57 |   for (int tmp = 1; tmp < argc; tmp++) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:59:21: note: Assuming 'tmp' is >= 'argc'
+   59 |   for (int tmp = 1; tmp < argc; tmp++) {
       |                     ^~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:57:3: note: Loop condition is false. Execution continues on line 88
-   57 |   for (int tmp = 1; tmp < argc; tmp++) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:59:3: note: Loop condition is false. Execution continues on line 90
+   59 |   for (int tmp = 1; tmp < argc; tmp++) {
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:89:7: note: Assuming field 'OUTPUT' is <= 0
-   89 |   if (OPTIONS.OUTPUT > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:91:7: note: Assuming field 'OUTPUT' is <= 0
+   91 |   if (OPTIONS.OUTPUT > 0)
       |       ^~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:89:3: note: Taking false branch
-   89 |   if (OPTIONS.OUTPUT > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:91:3: note: Taking false branch
+   91 |   if (OPTIONS.OUTPUT > 0)
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:98:7: note: Assuming field 'DEBUG' is <= 0
-   98 |   if (OPTIONS.DEBUG > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:100:7: note: Assuming field 'DEBUG' is <= 0
+  100 |   if (OPTIONS.DEBUG > 0)
       |       ^~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:98:3: note: Taking false branch
-   98 |   if (OPTIONS.DEBUG > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:100:3: note: Taking false branch
+  100 |   if (OPTIONS.DEBUG > 0)
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:100:7: note: Assuming field 'COUNT' is <= 0
-  100 |   if (OPTIONS.COUNT > 0) { // TODO add dest file headers
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:102:7: note: Assuming field 'COUNT' is <= 0
+  102 |   if (OPTIONS.COUNT > 0) { // TODO add dest file headers
       |       ^~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:100:3: note: Taking false branch
-  100 |   if (OPTIONS.COUNT > 0) { // TODO add dest file headers
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:102:3: note: Taking false branch
+  102 |   if (OPTIONS.COUNT > 0) { // TODO add dest file headers
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:105:7: note: Assuming field 'LINES' is <= 0
-  105 |   if (OPTIONS.LINES > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:107:7: note: Assuming field 'LINES' is <= 0
+  107 |   if (OPTIONS.LINES > 0)
       |       ^~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:105:3: note: Taking false branch
-  105 |   if (OPTIONS.LINES > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:107:3: note: Taking false branch
+  107 |   if (OPTIONS.LINES > 0)
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:108:7: note: Assuming field 'POSITIONS' is <= 0
-  108 |   if (OPTIONS.POSITIONS > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:110:7: note: Assuming field 'POSITIONS' is <= 0
+  110 |   if (OPTIONS.POSITIONS > 0)
       |       ^~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:108:3: note: Taking false branch
-  108 |   if (OPTIONS.POSITIONS > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:110:3: note: Taking false branch
+  110 |   if (OPTIONS.POSITIONS > 0)
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:111:7: note: Assuming field 'RANGE' is <= 0
-  111 |   if (OPTIONS.RANGE > 0) { // TODO fix -1? already fixed?
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:113:7: note: Assuming field 'RANGE' is <= 0
+  113 |   if (OPTIONS.RANGE > 0) { // TODO fix -1? already fixed?
       |       ^~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:111:3: note: Taking false branch
-  111 |   if (OPTIONS.RANGE > 0) { // TODO fix -1? already fixed?
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:113:3: note: Taking false branch
+  113 |   if (OPTIONS.RANGE > 0) { // TODO fix -1? already fixed?
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:118:7: note: Assuming field 'LIMITERS' is > 0
-  118 |   if (OPTIONS.LIMITERS > 0) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:120:7: note: Assuming field 'LIMITERS' is > 0
+  120 |   if (OPTIONS.LIMITERS > 0) {
       |       ^~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:118:3: note: Taking true branch
-  118 |   if (OPTIONS.LIMITERS > 0) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:120:3: note: Taking true branch
+  120 |   if (OPTIONS.LIMITERS > 0) {
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:120:21: note: Memory is allocated
-  120 |     char *buffer1 = malloc(strlen(argv[OPTIONS.LIMITERS]));
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:122:21: note: Memory is allocated
+  122 |     char *buffer1 = malloc(strlen(argv[OPTIONS.LIMITERS]));
       |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:126:5: note: Potential leak of memory pointed to by 'buffer1'
-  126 |     CopyLimitersResults(SOURCE.PTR, DEST.PTR, TERM.STR, buffer0, buffer1);
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:128:5: note: Potential leak of memory pointed to by 'buffer1'
+  128 |     CopyLimitersResults(SOURCE.PTR, DEST.PTR, TERM.STR, buffer0, buffer1);
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:128:1: warning: Potential leak of memory pointed to by 'buffer0' [clang-analyzer-unix.Malloc]
-  128 | }
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:130:1: warning: Potential leak of memory pointed to by 'buffer0' [clang-analyzer-unix.Malloc]
+  130 | }
       | ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:22:3: note: Calling 'ParseCmdLine'
-   22 |   ParseCmdLine(argc, argv);
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:24:3: note: Calling 'ParseCmdLine'
+   24 |   ParseCmdLine(argc, argv);
       |   ^~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:38:7: note: Assuming 'argc' is >= 2
-   38 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:40:7: note: Assuming 'argc' is >= 2
+   40 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
       |       ^~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:38:3: note: Taking false branch
-   38 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:40:3: note: Taking false branch
+   40 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:7: note: Assuming the condition is false
-   43 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:45:7: note: Assuming the condition is false
+   45 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
       |       ^~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:7: note: Left side of '||' is false
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:37: note: Assuming the condition is false
-   43 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:45:7: note: Left side of '||' is false
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:45:37: note: Assuming the condition is false
+   45 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
       |                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:3: note: Taking false branch
-   43 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:45:3: note: Taking false branch
+   45 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:57:21: note: 'tmp' is < 'argc'
-   57 |   for (int tmp = 1; tmp < argc; tmp++) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:59:21: note: 'tmp' is < 'argc'
+   59 |   for (int tmp = 1; tmp < argc; tmp++) {
       |                     ^~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:57:3: note: Loop condition is true.  Entering loop body
-   57 |   for (int tmp = 1; tmp < argc; tmp++) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:59:3: note: Loop condition is true.  Entering loop body
+   59 |   for (int tmp = 1; tmp < argc; tmp++) {
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:58:9: note: Assuming the condition is false
-   58 |     if (strcmp(argv[tmp], "-db") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:60:9: note: Assuming the condition is false
+   60 |     if (strcmp(argv[tmp], "-db") == 0)
       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:58:5: note: Taking false branch
-   58 |     if (strcmp(argv[tmp], "-db") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:60:5: note: Taking false branch
+   60 |     if (strcmp(argv[tmp], "-db") == 0)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:61:9: note: Assuming the condition is false
-   61 |     if (strcmp(argv[tmp], "-c") == 0 || strcmp(argv[tmp], "--count") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:63:9: note: Assuming the condition is false
+   63 |     if (strcmp(argv[tmp], "-c") == 0 || strcmp(argv[tmp], "--count") == 0)
       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:61:9: note: Left side of '||' is false
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:61:41: note: Assuming the condition is false
-   61 |     if (strcmp(argv[tmp], "-c") == 0 || strcmp(argv[tmp], "--count") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:63:9: note: Left side of '||' is false
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:63:41: note: Assuming the condition is false
+   63 |     if (strcmp(argv[tmp], "-c") == 0 || strcmp(argv[tmp], "--count") == 0)
       |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:61:5: note: Taking false branch
-   61 |     if (strcmp(argv[tmp], "-c") == 0 || strcmp(argv[tmp], "--count") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:63:5: note: Taking false branch
+   63 |     if (strcmp(argv[tmp], "-c") == 0 || strcmp(argv[tmp], "--count") == 0)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:64:9: note: Assuming the condition is false
-   64 |     if (strstr(argv[tmp], "--limiters=") != NULL)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:66:9: note: Assuming the condition is false
+   66 |     if (strstr(argv[tmp], "--limiters=") != NULL)
       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:64:5: note: Taking false branch
-   64 |     if (strstr(argv[tmp], "--limiters=") != NULL)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:66:5: note: Taking false branch
+   66 |     if (strstr(argv[tmp], "--limiters=") != NULL)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:67:9: note: Assuming the condition is false
-   67 |     if (strcmp(argv[tmp], "-l") == 0 || strcmp(argv[tmp], "--lines") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:69:9: note: Assuming the condition is false
+   69 |     if (strcmp(argv[tmp], "-l") == 0 || strcmp(argv[tmp], "--lines") == 0)
       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:67:9: note: Left side of '||' is false
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:67:41: note: Assuming the condition is false
-   67 |     if (strcmp(argv[tmp], "-l") == 0 || strcmp(argv[tmp], "--lines") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:69:9: note: Left side of '||' is false
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:69:41: note: Assuming the condition is false
+   69 |     if (strcmp(argv[tmp], "-l") == 0 || strcmp(argv[tmp], "--lines") == 0)
       |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:67:5: note: Taking false branch
-   67 |     if (strcmp(argv[tmp], "-l") == 0 || strcmp(argv[tmp], "--lines") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:69:5: note: Taking false branch
+   69 |     if (strcmp(argv[tmp], "-l") == 0 || strcmp(argv[tmp], "--lines") == 0)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:70:9: note: Assuming the condition is false
-   70 |     if (strcmp(argv[tmp], "-o") == 0 || strcmp(argv[tmp], "--output") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:72:9: note: Assuming the condition is false
+   72 |     if (strcmp(argv[tmp], "-o") == 0 || strcmp(argv[tmp], "--output") == 0)
       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:70:9: note: Left side of '||' is false
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:70:41: note: Assuming the condition is false
-   70 |     if (strcmp(argv[tmp], "-o") == 0 || strcmp(argv[tmp], "--output") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:72:9: note: Left side of '||' is false
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:72:41: note: Assuming the condition is false
+   72 |     if (strcmp(argv[tmp], "-o") == 0 || strcmp(argv[tmp], "--output") == 0)
       |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:70:5: note: Taking false branch
-   70 |     if (strcmp(argv[tmp], "-o") == 0 || strcmp(argv[tmp], "--output") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:72:5: note: Taking false branch
+   72 |     if (strcmp(argv[tmp], "-o") == 0 || strcmp(argv[tmp], "--output") == 0)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:73:9: note: Assuming the condition is false
-   73 |     if (strcmp(argv[tmp], "-p") == 0 || strcmp(argv[tmp], "--positions") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:75:9: note: Assuming the condition is false
+   75 |     if (strcmp(argv[tmp], "-p") == 0 || strcmp(argv[tmp], "--positions") == 0)
       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:73:9: note: Left side of '||' is false
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:73:41: note: Assuming the condition is false
-   73 |     if (strcmp(argv[tmp], "-p") == 0 || strcmp(argv[tmp], "--positions") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:75:9: note: Left side of '||' is false
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:75:41: note: Assuming the condition is false
+   75 |     if (strcmp(argv[tmp], "-p") == 0 || strcmp(argv[tmp], "--positions") == 0)
       |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:73:5: note: Taking false branch
-   73 |     if (strcmp(argv[tmp], "-p") == 0 || strcmp(argv[tmp], "--positions") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:75:5: note: Taking false branch
+   75 |     if (strcmp(argv[tmp], "-p") == 0 || strcmp(argv[tmp], "--positions") == 0)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:76:9: note: Assuming the condition is false
-   76 |     if (strstr(argv[tmp], "--range=") != NULL)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:78:9: note: Assuming the condition is false
+   78 |     if (strstr(argv[tmp], "--range=") != NULL)
       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:76:5: note: Taking false branch
-   76 |     if (strstr(argv[tmp], "--range=") != NULL)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:78:5: note: Taking false branch
+   78 |     if (strstr(argv[tmp], "--range=") != NULL)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:79:14: note: Assuming field 'DEBUG' is not equal to 0
-   79 |     else if (OPTIONS.DEBUG == 0 && OPTIONS.COUNT == 0 &&
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:81:14: note: Assuming field 'DEBUG' is not equal to 0
+   81 |     else if (OPTIONS.DEBUG == 0 && OPTIONS.COUNT == 0 &&
       |              ^~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:79:33: note: Left side of '&&' is false
-   79 |     else if (OPTIONS.DEBUG == 0 && OPTIONS.COUNT == 0 &&
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:81:33: note: Left side of '&&' is false
+   81 |     else if (OPTIONS.DEBUG == 0 && OPTIONS.COUNT == 0 &&
       |                                 ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:57:21: note: Assuming 'tmp' is >= 'argc'
-   57 |   for (int tmp = 1; tmp < argc; tmp++) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:59:21: note: Assuming 'tmp' is >= 'argc'
+   59 |   for (int tmp = 1; tmp < argc; tmp++) {
       |                     ^~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:57:3: note: Loop condition is false. Execution continues on line 88
-   57 |   for (int tmp = 1; tmp < argc; tmp++) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:59:3: note: Loop condition is false. Execution continues on line 90
+   59 |   for (int tmp = 1; tmp < argc; tmp++) {
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:89:7: note: Assuming field 'OUTPUT' is <= 0
-   89 |   if (OPTIONS.OUTPUT > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:91:7: note: Assuming field 'OUTPUT' is <= 0
+   91 |   if (OPTIONS.OUTPUT > 0)
       |       ^~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:89:3: note: Taking false branch
-   89 |   if (OPTIONS.OUTPUT > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:91:3: note: Taking false branch
+   91 |   if (OPTIONS.OUTPUT > 0)
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:98:7: note: Assuming field 'DEBUG' is <= 0
-   98 |   if (OPTIONS.DEBUG > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:100:7: note: Assuming field 'DEBUG' is <= 0
+  100 |   if (OPTIONS.DEBUG > 0)
       |       ^~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:98:3: note: Taking false branch
-   98 |   if (OPTIONS.DEBUG > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:100:3: note: Taking false branch
+  100 |   if (OPTIONS.DEBUG > 0)
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:100:7: note: Assuming field 'COUNT' is <= 0
-  100 |   if (OPTIONS.COUNT > 0) { // TODO add dest file headers
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:102:7: note: Assuming field 'COUNT' is <= 0
+  102 |   if (OPTIONS.COUNT > 0) { // TODO add dest file headers
       |       ^~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:100:3: note: Taking false branch
-  100 |   if (OPTIONS.COUNT > 0) { // TODO add dest file headers
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:102:3: note: Taking false branch
+  102 |   if (OPTIONS.COUNT > 0) { // TODO add dest file headers
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:105:7: note: Assuming field 'LINES' is <= 0
-  105 |   if (OPTIONS.LINES > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:107:7: note: Assuming field 'LINES' is <= 0
+  107 |   if (OPTIONS.LINES > 0)
       |       ^~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:105:3: note: Taking false branch
-  105 |   if (OPTIONS.LINES > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:107:3: note: Taking false branch
+  107 |   if (OPTIONS.LINES > 0)
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:108:7: note: Assuming field 'POSITIONS' is <= 0
-  108 |   if (OPTIONS.POSITIONS > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:110:7: note: Assuming field 'POSITIONS' is <= 0
+  110 |   if (OPTIONS.POSITIONS > 0)
       |       ^~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:108:3: note: Taking false branch
-  108 |   if (OPTIONS.POSITIONS > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:110:3: note: Taking false branch
+  110 |   if (OPTIONS.POSITIONS > 0)
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:111:7: note: Assuming field 'RANGE' is <= 0
-  111 |   if (OPTIONS.RANGE > 0) { // TODO fix -1? already fixed?
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:113:7: note: Assuming field 'RANGE' is <= 0
+  113 |   if (OPTIONS.RANGE > 0) { // TODO fix -1? already fixed?
       |       ^~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:111:3: note: Taking false branch
-  111 |   if (OPTIONS.RANGE > 0) { // TODO fix -1? already fixed?
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:113:3: note: Taking false branch
+  113 |   if (OPTIONS.RANGE > 0) { // TODO fix -1? already fixed?
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:118:7: note: Assuming field 'LIMITERS' is > 0
-  118 |   if (OPTIONS.LIMITERS > 0) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:120:7: note: Assuming field 'LIMITERS' is > 0
+  120 |   if (OPTIONS.LIMITERS > 0) {
       |       ^~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:118:3: note: Taking true branch
-  118 |   if (OPTIONS.LIMITERS > 0) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:120:3: note: Taking true branch
+  120 |   if (OPTIONS.LIMITERS > 0) {
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:119:21: note: Memory is allocated
-  119 |     char *buffer0 = malloc(strlen(argv[OPTIONS.LIMITERS]));
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:121:21: note: Memory is allocated
+  121 |     char *buffer0 = malloc(strlen(argv[OPTIONS.LIMITERS]));
       |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:128:1: note: Potential leak of memory pointed to by 'buffer0'
-  128 | }
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:130:1: note: Potential leak of memory pointed to by 'buffer0'
+  130 | }
       | ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:130:55: warning: The right operand of '-' is a garbage value [clang-analyzer-core.UndefinedBinaryOperatorResult]
-  130 |         if (i > g && suffix_table[i + term_lenght - 1 - f] < i - g)
-      |                                                       ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:22:3: note: Calling 'ParseCmdLine'
-   22 |   ParseCmdLine(argc, argv);
-      |   ^~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:38:7: note: Assuming 'argc' is >= 2
-   38 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
-      |       ^~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:38:3: note: Taking false branch
-   38 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
-      |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:7: note: Assuming the condition is false
-   43 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
-      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:7: note: Left side of '||' is false
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:37: note: Assuming the condition is false
-   43 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
-      |                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:3: note: Taking false branch
-   43 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
-      |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:48:3: note: Calling 'InitTerm'
-   48 |   InitTerm(argv[2]);
-      |   ^~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:75:9: note: Assuming 'term' is not equal to NULL
-   75 |     if (term != NULL){
-      |         ^~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:75:5: note: Taking true branch
-   75 |     if (term != NULL){
-      |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:76:18: note: Field 'STR' is equal to NULL
-   76 |         if (TERM.STR == NULL || strcmp(term , TERM.STR) != 0){
-      |                  ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:76:30: note: Left side of '||' is true
-   76 |         if (TERM.STR == NULL || strcmp(term , TERM.STR) != 0){
-      |                              ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:82:13: note: Calling 'GoodSuffix'
-   82 |             GoodSuffix(TERM.STR, TERM.LENGHT);
-      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:163:5: note: Calling 'Suffixes'
-  163 |     Suffixes(term, term_lenght, suffix_table);
-      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:125:9: note: 'f' declared without an initial value
-  125 |     int f, g, i;
-      |         ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:129:31: note: Assuming 'i' is >= 0
-  129 |     for (i = term_lenght - 2; i >= 0; --i) {
-      |                               ^~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:129:5: note: Loop condition is true.  Entering loop body
-  129 |     for (i = term_lenght - 2; i >= 0; --i) {
-      |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:130:13: note: Assuming 'i' is > 'g'
-  130 |         if (i > g && suffix_table[i + term_lenght - 1 - f] < i - g)
-      |             ^~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:130:13: note: Left side of '&&' is true
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:130:55: note: The right operand of '-' is a garbage value
-  130 |         if (i > g && suffix_table[i + term_lenght - 1 - f] < i - g)
-      |                                                       ^ ~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:170:39: warning: The left operand of '==' is a garbage value [clang-analyzer-core.UndefinedBinaryOperatorResult]
-  170 |                 if (g_suffix_table[j] == term_lenght)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:158:39: warning: The left operand of '==' is a garbage value [clang-analyzer-core.UndefinedBinaryOperatorResult]
+  158 |                 if (g_suffix_table[j] == term_lenght)
       |                                       ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:22:3: note: Calling 'ParseCmdLine'
-   22 |   ParseCmdLine(argc, argv);
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:24:3: note: Calling 'ParseCmdLine'
+   24 |   ParseCmdLine(argc, argv);
       |   ^~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:38:7: note: Assuming 'argc' is >= 2
-   38 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:40:7: note: Assuming 'argc' is >= 2
+   40 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
       |       ^~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:38:3: note: Taking false branch
-   38 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:40:3: note: Taking false branch
+   40 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:7: note: Assuming the condition is false
-   43 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:45:7: note: Assuming the condition is false
+   45 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
       |       ^~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:7: note: Left side of '||' is false
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:37: note: Assuming the condition is false
-   43 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:45:7: note: Left side of '||' is false
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:45:37: note: Assuming the condition is false
+   45 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
       |                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:3: note: Taking false branch
-   43 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:45:3: note: Taking false branch
+   45 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:48:3: note: Calling 'InitTerm'
-   48 |   InitTerm(argv[2]);
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:50:3: note: Calling 'InitTerm'
+   50 |   InitTerm(argv[2]);
       |   ^~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:75:9: note: Assuming 'term' is not equal to NULL
-   75 |     if (term != NULL){
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:71:9: note: Assuming 'term' is not equal to NULL
+   71 |     if (term != NULL) {
       |         ^~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:75:5: note: Taking true branch
-   75 |     if (term != NULL){
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:71:5: note: Taking true branch
+   71 |     if (term != NULL) {
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:76:18: note: Field 'STR' is equal to NULL
-   76 |         if (TERM.STR == NULL || strcmp(term , TERM.STR) != 0){
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:72:18: note: Field 'STR' is equal to NULL
+   72 |         if (TERM.STR == NULL || strcmp(term, TERM.STR) != 0) {
       |                  ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:76:30: note: Left side of '||' is true
-   76 |         if (TERM.STR == NULL || strcmp(term , TERM.STR) != 0){
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:72:30: note: Left side of '||' is true
+   72 |         if (TERM.STR == NULL || strcmp(term, TERM.STR) != 0) {
       |                              ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:82:13: note: Calling 'GoodSuffix'
-   82 |             GoodSuffix(TERM.STR, TERM.LENGHT);
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:78:13: note: Calling 'GoodSuffix'
+   78 |             GoodSuffix(TERM.STR, TERM.LENGHT);
       |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:157:5: note: 'j' initialized to 0
-  157 |     int j = 0; 
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:145:5: note: 'j' initialized to 0
+  145 |     int j = 0;
       |     ^~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:161:27: note: Storing uninitialized value
-  161 |     int *g_suffix_table = malloc(sizeof(int) * term_lenght);
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:149:27: note: Storing uninitialized value
+  149 |     int *g_suffix_table = malloc(sizeof(int) * term_lenght);
       |                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:165:17: note: Assuming 'i' is >= 'term_lenght'
-  165 |     for (i = 0; i < term_lenght; ++i)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:153:17: note: Assuming 'i' is >= 'term_lenght'
+  153 |     for (i = 0; i < term_lenght; ++i)
       |                 ^~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:165:5: note: Loop condition is false. Execution continues on line 167
-  165 |     for (i = 0; i < term_lenght; ++i)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:153:5: note: Loop condition is false. Execution continues on line 155
+  153 |     for (i = 0; i < term_lenght; ++i)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:167:31: note: Assuming 'i' is >= 0
-  167 |     for (i = term_lenght - 1; i >= 0; --i)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:155:31: note: Assuming 'i' is >= 0
+  155 |     for (i = term_lenght - 1; i >= 0; --i)
       |                               ^~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:167:5: note: Loop condition is true.  Entering loop body
-  167 |     for (i = term_lenght - 1; i >= 0; --i)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:155:5: note: Loop condition is true.  Entering loop body
+  155 |     for (i = term_lenght - 1; i >= 0; --i)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:168:13: note: Assuming the condition is false
-  168 |         if (suffix_table[i] == i + 1)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:156:13: note: Assuming the condition is false
+  156 |         if (suffix_table[i] == i + 1)
       |             ^~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:168:9: note: Taking false branch
-  168 |         if (suffix_table[i] == i + 1)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:156:9: note: Taking false branch
+  156 |         if (suffix_table[i] == i + 1)
       |         ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:167:31: note: 'i' is >= 0
-  167 |     for (i = term_lenght - 1; i >= 0; --i)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:155:31: note: 'i' is >= 0
+  155 |     for (i = term_lenght - 1; i >= 0; --i)
       |                               ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:167:5: note: Loop condition is true.  Entering loop body
-  167 |     for (i = term_lenght - 1; i >= 0; --i)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:155:5: note: Loop condition is true.  Entering loop body
+  155 |     for (i = term_lenght - 1; i >= 0; --i)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:168:13: note: Assuming the condition is true
-  168 |         if (suffix_table[i] == i + 1)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:156:13: note: Assuming the condition is true
+  156 |         if (suffix_table[i] == i + 1)
       |             ^~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:168:9: note: Taking true branch
-  168 |         if (suffix_table[i] == i + 1)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:156:9: note: Taking true branch
+  156 |         if (suffix_table[i] == i + 1)
       |         ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:169:20: note: Assuming the condition is true
-  169 |             for (; j < term_lenght - 1 - i; ++j)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:157:20: note: Assuming the condition is true
+  157 |             for (; j < term_lenght - 1 - i; ++j)
       |                    ^~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:169:13: note: Loop condition is true.  Entering loop body
-  169 |             for (; j < term_lenght - 1 - i; ++j)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:157:13: note: Loop condition is true.  Entering loop body
+  157 |             for (; j < term_lenght - 1 - i; ++j)
       |             ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:170:39: note: The left operand of '==' is a garbage value
-  170 |                 if (g_suffix_table[j] == term_lenght)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:158:39: note: The left operand of '==' is a garbage value
+  158 |                 if (g_suffix_table[j] == term_lenght)
       |                     ~~~~~~~~~~~~~~~~~ ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:175:23: warning: Potential leak of memory pointed to by 'suffix_table' [clang-analyzer-unix.Malloc]
-  175 |     good_suffix_ptr = realloc(good_suffix_ptr, sizeof(g_suffix_table));
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:163:23: warning: Potential leak of memory pointed to by 'suffix_table' [clang-analyzer-unix.Malloc]
+  163 |     good_suffix_ptr = realloc(good_suffix_ptr, sizeof(g_suffix_table));
       |                       ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:22:3: note: Calling 'ParseCmdLine'
-   22 |   ParseCmdLine(argc, argv);
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:24:3: note: Calling 'ParseCmdLine'
+   24 |   ParseCmdLine(argc, argv);
       |   ^~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:38:7: note: Assuming 'argc' is >= 2
-   38 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:40:7: note: Assuming 'argc' is >= 2
+   40 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
       |       ^~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:38:3: note: Taking false branch
-   38 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:40:3: note: Taking false branch
+   40 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:7: note: Assuming the condition is false
-   43 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:45:7: note: Assuming the condition is false
+   45 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
       |       ^~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:7: note: Left side of '||' is false
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:37: note: Assuming the condition is false
-   43 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:45:7: note: Left side of '||' is false
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:45:37: note: Assuming the condition is false
+   45 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
       |                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:3: note: Taking false branch
-   43 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:45:3: note: Taking false branch
+   45 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:48:3: note: Calling 'InitTerm'
-   48 |   InitTerm(argv[2]);
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:50:3: note: Calling 'InitTerm'
+   50 |   InitTerm(argv[2]);
       |   ^~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:75:9: note: Assuming 'term' is not equal to NULL
-   75 |     if (term != NULL){
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:71:9: note: Assuming 'term' is not equal to NULL
+   71 |     if (term != NULL) {
       |         ^~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:75:5: note: Taking true branch
-   75 |     if (term != NULL){
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:71:5: note: Taking true branch
+   71 |     if (term != NULL) {
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:76:18: note: Field 'STR' is equal to NULL
-   76 |         if (TERM.STR == NULL || strcmp(term , TERM.STR) != 0){
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:72:18: note: Field 'STR' is equal to NULL
+   72 |         if (TERM.STR == NULL || strcmp(term, TERM.STR) != 0) {
       |                  ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:76:30: note: Left side of '||' is true
-   76 |         if (TERM.STR == NULL || strcmp(term , TERM.STR) != 0){
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:72:30: note: Left side of '||' is true
+   72 |         if (TERM.STR == NULL || strcmp(term, TERM.STR) != 0) {
       |                              ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:82:13: note: Calling 'GoodSuffix'
-   82 |             GoodSuffix(TERM.STR, TERM.LENGHT);
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:78:13: note: Calling 'GoodSuffix'
+   78 |             GoodSuffix(TERM.STR, TERM.LENGHT);
       |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:160:27: note: Memory is allocated
-  160 |     int *suffix_table   = malloc(sizeof(int) * term_lenght); 
-      |                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:165:17: note: Assuming 'i' is >= 'term_lenght'
-  165 |     for (i = 0; i < term_lenght; ++i)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:148:25: note: Memory is allocated
+  148 |     int *suffix_table = malloc(sizeof(int) * term_lenght);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:153:17: note: Assuming 'i' is >= 'term_lenght'
+  153 |     for (i = 0; i < term_lenght; ++i)
       |                 ^~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:165:5: note: Loop condition is false. Execution continues on line 167
-  165 |     for (i = 0; i < term_lenght; ++i)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:153:5: note: Loop condition is false. Execution continues on line 155
+  153 |     for (i = 0; i < term_lenght; ++i)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:167:31: note: 'i' is < 0
-  167 |     for (i = term_lenght - 1; i >= 0; --i)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:155:31: note: 'i' is < 0
+  155 |     for (i = term_lenght - 1; i >= 0; --i)
       |                               ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:167:5: note: Loop condition is false. Execution continues on line 172
-  167 |     for (i = term_lenght - 1; i >= 0; --i)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:155:5: note: Loop condition is false. Execution continues on line 160
+  155 |     for (i = term_lenght - 1; i >= 0; --i)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:172:5: note: Loop condition is false. Execution continues on line 175
-  172 |     for (i = 0; i <= term_lenght - 2; ++i)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:160:5: note: Loop condition is false. Execution continues on line 163
+  160 |     for (i = 0; i <= term_lenght - 2; ++i)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:175:23: note: Potential leak of memory pointed to by 'suffix_table'
-  175 |     good_suffix_ptr = realloc(good_suffix_ptr, sizeof(g_suffix_table));
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:163:23: note: Potential leak of memory pointed to by 'suffix_table'
+  163 |     good_suffix_ptr = realloc(good_suffix_ptr, sizeof(g_suffix_table));
       |                       ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:178:1: warning: Potential leak of memory pointed to by 'g_suffix_table' [clang-analyzer-unix.Malloc]
-  178 | }
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:166:1: warning: Potential leak of memory pointed to by 'g_suffix_table' [clang-analyzer-unix.Malloc]
+  166 | }
       | ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:22:3: note: Calling 'ParseCmdLine'
-   22 |   ParseCmdLine(argc, argv);
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:24:3: note: Calling 'ParseCmdLine'
+   24 |   ParseCmdLine(argc, argv);
       |   ^~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:38:7: note: Assuming 'argc' is >= 2
-   38 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:40:7: note: Assuming 'argc' is >= 2
+   40 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
       |       ^~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:38:3: note: Taking false branch
-   38 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:40:3: note: Taking false branch
+   40 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:7: note: Assuming the condition is false
-   43 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:45:7: note: Assuming the condition is false
+   45 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
       |       ^~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:7: note: Left side of '||' is false
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:37: note: Assuming the condition is false
-   43 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:45:7: note: Left side of '||' is false
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:45:37: note: Assuming the condition is false
+   45 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
       |                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:3: note: Taking false branch
-   43 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:45:3: note: Taking false branch
+   45 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:48:3: note: Calling 'InitTerm'
-   48 |   InitTerm(argv[2]);
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:50:3: note: Calling 'InitTerm'
+   50 |   InitTerm(argv[2]);
       |   ^~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:75:9: note: Assuming 'term' is not equal to NULL
-   75 |     if (term != NULL){
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:71:9: note: Assuming 'term' is not equal to NULL
+   71 |     if (term != NULL) {
       |         ^~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:75:5: note: Taking true branch
-   75 |     if (term != NULL){
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:71:5: note: Taking true branch
+   71 |     if (term != NULL) {
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:76:18: note: Field 'STR' is equal to NULL
-   76 |         if (TERM.STR == NULL || strcmp(term , TERM.STR) != 0){
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:72:18: note: Field 'STR' is equal to NULL
+   72 |         if (TERM.STR == NULL || strcmp(term, TERM.STR) != 0) {
       |                  ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:76:30: note: Left side of '||' is true
-   76 |         if (TERM.STR == NULL || strcmp(term , TERM.STR) != 0){
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:72:30: note: Left side of '||' is true
+   72 |         if (TERM.STR == NULL || strcmp(term, TERM.STR) != 0) {
       |                              ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:82:13: note: Calling 'GoodSuffix'
-   82 |             GoodSuffix(TERM.STR, TERM.LENGHT);
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:78:13: note: Calling 'GoodSuffix'
+   78 |             GoodSuffix(TERM.STR, TERM.LENGHT);
       |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:161:27: note: Memory is allocated
-  161 |     int *g_suffix_table = malloc(sizeof(int) * term_lenght);
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:149:27: note: Memory is allocated
+  149 |     int *g_suffix_table = malloc(sizeof(int) * term_lenght);
       |                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:165:17: note: Assuming 'i' is >= 'term_lenght'
-  165 |     for (i = 0; i < term_lenght; ++i)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:153:17: note: Assuming 'i' is >= 'term_lenght'
+  153 |     for (i = 0; i < term_lenght; ++i)
       |                 ^~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:165:5: note: Loop condition is false. Execution continues on line 167
-  165 |     for (i = 0; i < term_lenght; ++i)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:153:5: note: Loop condition is false. Execution continues on line 155
+  153 |     for (i = 0; i < term_lenght; ++i)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:167:31: note: Assuming 'i' is < 0
-  167 |     for (i = term_lenght - 1; i >= 0; --i)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:155:31: note: Assuming 'i' is < 0
+  155 |     for (i = term_lenght - 1; i >= 0; --i)
       |                               ^~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:167:5: note: Loop condition is false. Execution continues on line 172
-  167 |     for (i = term_lenght - 1; i >= 0; --i)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:155:5: note: Loop condition is false. Execution continues on line 160
+  155 |     for (i = term_lenght - 1; i >= 0; --i)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:172:17: note: Assuming the condition is false
-  172 |     for (i = 0; i <= term_lenght - 2; ++i)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:160:17: note: Assuming the condition is false
+  160 |     for (i = 0; i <= term_lenght - 2; ++i)
       |                 ^~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:172:5: note: Loop condition is false. Execution continues on line 175
-  172 |     for (i = 0; i <= term_lenght - 2; ++i)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:160:5: note: Loop condition is false. Execution continues on line 163
+  160 |     for (i = 0; i <= term_lenght - 2; ++i)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:178:1: note: Potential leak of memory pointed to by 'g_suffix_table'
-  178 | }
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:166:1: note: Potential leak of memory pointed to by 'g_suffix_table'
+  166 | }
       | ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:394:37: warning: Null pointer passed as 1st argument to string length function [clang-analyzer-unix.cstring.NullArg]
-  394 |     const long long term_size     = strlen(term);//TODO CHANGE THIS TO A 
-      |                                     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:22:3: note: Calling 'ParseCmdLine'
-   22 |   ParseCmdLine(argc, argv);
-      |   ^~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:38:7: note: Assuming 'argc' is >= 2
-   38 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
-      |       ^~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:38:3: note: Taking false branch
-   38 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
-      |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:7: note: Assuming the condition is false
-   43 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
-      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:7: note: Left side of '||' is false
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:37: note: Assuming the condition is false
-   43 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
-      |                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:3: note: Taking false branch
-   43 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
-      |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:57:21: note: 'tmp' is < 'argc'
-   57 |   for (int tmp = 1; tmp < argc; tmp++) {
-      |                     ^~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:57:3: note: Loop condition is true.  Entering loop body
-   57 |   for (int tmp = 1; tmp < argc; tmp++) {
-      |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:58:9: note: Assuming the condition is false
-   58 |     if (strcmp(argv[tmp], "-db") == 0)
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:58:5: note: Taking false branch
-   58 |     if (strcmp(argv[tmp], "-db") == 0)
-      |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:61:9: note: Assuming the condition is false
-   61 |     if (strcmp(argv[tmp], "-c") == 0 || strcmp(argv[tmp], "--count") == 0)
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:61:9: note: Left side of '||' is false
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:61:41: note: Assuming the condition is false
-   61 |     if (strcmp(argv[tmp], "-c") == 0 || strcmp(argv[tmp], "--count") == 0)
-      |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:61:5: note: Taking false branch
-   61 |     if (strcmp(argv[tmp], "-c") == 0 || strcmp(argv[tmp], "--count") == 0)
-      |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:64:9: note: Assuming the condition is false
-   64 |     if (strstr(argv[tmp], "--limiters=") != NULL)
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:64:5: note: Taking false branch
-   64 |     if (strstr(argv[tmp], "--limiters=") != NULL)
-      |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:67:9: note: Assuming the condition is false
-   67 |     if (strcmp(argv[tmp], "-l") == 0 || strcmp(argv[tmp], "--lines") == 0)
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:67:9: note: Left side of '||' is false
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:67:41: note: Assuming the condition is false
-   67 |     if (strcmp(argv[tmp], "-l") == 0 || strcmp(argv[tmp], "--lines") == 0)
-      |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:67:5: note: Taking false branch
-   67 |     if (strcmp(argv[tmp], "-l") == 0 || strcmp(argv[tmp], "--lines") == 0)
-      |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:70:9: note: Assuming the condition is false
-   70 |     if (strcmp(argv[tmp], "-o") == 0 || strcmp(argv[tmp], "--output") == 0)
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:70:9: note: Left side of '||' is false
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:70:41: note: Assuming the condition is false
-   70 |     if (strcmp(argv[tmp], "-o") == 0 || strcmp(argv[tmp], "--output") == 0)
-      |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:70:5: note: Taking false branch
-   70 |     if (strcmp(argv[tmp], "-o") == 0 || strcmp(argv[tmp], "--output") == 0)
-      |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:73:9: note: Assuming the condition is false
-   73 |     if (strcmp(argv[tmp], "-p") == 0 || strcmp(argv[tmp], "--positions") == 0)
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:73:9: note: Left side of '||' is false
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:73:41: note: Assuming the condition is false
-   73 |     if (strcmp(argv[tmp], "-p") == 0 || strcmp(argv[tmp], "--positions") == 0)
-      |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:73:5: note: Taking false branch
-   73 |     if (strcmp(argv[tmp], "-p") == 0 || strcmp(argv[tmp], "--positions") == 0)
-      |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:76:9: note: Assuming the condition is false
-   76 |     if (strstr(argv[tmp], "--range=") != NULL)
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:76:5: note: Taking false branch
-   76 |     if (strstr(argv[tmp], "--range=") != NULL)
-      |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:79:14: note: Assuming field 'DEBUG' is not equal to 0
-   79 |     else if (OPTIONS.DEBUG == 0 && OPTIONS.COUNT == 0 &&
-      |              ^~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:79:33: note: Left side of '&&' is false
-   79 |     else if (OPTIONS.DEBUG == 0 && OPTIONS.COUNT == 0 &&
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:359:33: warning: Null pointer passed as 1st argument to string length function [clang-analyzer-unix.cstring.NullArg]
+  359 |     const long long term_size = strlen(term); // TODO CHANGE THIS TO A
       |                                 ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:57:21: note: Assuming 'tmp' is >= 'argc'
-   57 |   for (int tmp = 1; tmp < argc; tmp++) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:24:3: note: Calling 'ParseCmdLine'
+   24 |   ParseCmdLine(argc, argv);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:40:7: note: Assuming 'argc' is >= 2
+   40 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
+      |       ^~~~~~~~
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:40:3: note: Taking false branch
+   40 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
+      |   ^
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:45:7: note: Assuming the condition is false
+   45 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:45:7: note: Left side of '||' is false
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:45:37: note: Assuming the condition is false
+   45 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
+      |                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:45:3: note: Taking false branch
+   45 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
+      |   ^
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:59:21: note: 'tmp' is < 'argc'
+   59 |   for (int tmp = 1; tmp < argc; tmp++) {
+      |                     ^~~
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:59:3: note: Loop condition is true.  Entering loop body
+   59 |   for (int tmp = 1; tmp < argc; tmp++) {
+      |   ^
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:60:9: note: Assuming the condition is false
+   60 |     if (strcmp(argv[tmp], "-db") == 0)
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:60:5: note: Taking false branch
+   60 |     if (strcmp(argv[tmp], "-db") == 0)
+      |     ^
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:63:9: note: Assuming the condition is false
+   63 |     if (strcmp(argv[tmp], "-c") == 0 || strcmp(argv[tmp], "--count") == 0)
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:63:9: note: Left side of '||' is false
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:63:41: note: Assuming the condition is false
+   63 |     if (strcmp(argv[tmp], "-c") == 0 || strcmp(argv[tmp], "--count") == 0)
+      |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:63:5: note: Taking false branch
+   63 |     if (strcmp(argv[tmp], "-c") == 0 || strcmp(argv[tmp], "--count") == 0)
+      |     ^
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:66:9: note: Assuming the condition is false
+   66 |     if (strstr(argv[tmp], "--limiters=") != NULL)
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:66:5: note: Taking false branch
+   66 |     if (strstr(argv[tmp], "--limiters=") != NULL)
+      |     ^
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:69:9: note: Assuming the condition is false
+   69 |     if (strcmp(argv[tmp], "-l") == 0 || strcmp(argv[tmp], "--lines") == 0)
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:69:9: note: Left side of '||' is false
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:69:41: note: Assuming the condition is false
+   69 |     if (strcmp(argv[tmp], "-l") == 0 || strcmp(argv[tmp], "--lines") == 0)
+      |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:69:5: note: Taking false branch
+   69 |     if (strcmp(argv[tmp], "-l") == 0 || strcmp(argv[tmp], "--lines") == 0)
+      |     ^
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:72:9: note: Assuming the condition is false
+   72 |     if (strcmp(argv[tmp], "-o") == 0 || strcmp(argv[tmp], "--output") == 0)
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:72:9: note: Left side of '||' is false
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:72:41: note: Assuming the condition is false
+   72 |     if (strcmp(argv[tmp], "-o") == 0 || strcmp(argv[tmp], "--output") == 0)
+      |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:72:5: note: Taking false branch
+   72 |     if (strcmp(argv[tmp], "-o") == 0 || strcmp(argv[tmp], "--output") == 0)
+      |     ^
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:75:9: note: Assuming the condition is false
+   75 |     if (strcmp(argv[tmp], "-p") == 0 || strcmp(argv[tmp], "--positions") == 0)
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:75:9: note: Left side of '||' is false
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:75:41: note: Assuming the condition is false
+   75 |     if (strcmp(argv[tmp], "-p") == 0 || strcmp(argv[tmp], "--positions") == 0)
+      |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:75:5: note: Taking false branch
+   75 |     if (strcmp(argv[tmp], "-p") == 0 || strcmp(argv[tmp], "--positions") == 0)
+      |     ^
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:78:9: note: Assuming the condition is false
+   78 |     if (strstr(argv[tmp], "--range=") != NULL)
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:78:5: note: Taking false branch
+   78 |     if (strstr(argv[tmp], "--range=") != NULL)
+      |     ^
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:81:14: note: Assuming field 'DEBUG' is not equal to 0
+   81 |     else if (OPTIONS.DEBUG == 0 && OPTIONS.COUNT == 0 &&
+      |              ^~~~~~~~~~~~~~~~~~
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:81:33: note: Left side of '&&' is false
+   81 |     else if (OPTIONS.DEBUG == 0 && OPTIONS.COUNT == 0 &&
+      |                                 ^
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:59:21: note: Assuming 'tmp' is >= 'argc'
+   59 |   for (int tmp = 1; tmp < argc; tmp++) {
       |                     ^~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:57:3: note: Loop condition is false. Execution continues on line 88
-   57 |   for (int tmp = 1; tmp < argc; tmp++) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:59:3: note: Loop condition is false. Execution continues on line 90
+   59 |   for (int tmp = 1; tmp < argc; tmp++) {
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:89:7: note: Assuming field 'OUTPUT' is <= 0
-   89 |   if (OPTIONS.OUTPUT > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:91:7: note: Assuming field 'OUTPUT' is <= 0
+   91 |   if (OPTIONS.OUTPUT > 0)
       |       ^~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:89:3: note: Taking false branch
-   89 |   if (OPTIONS.OUTPUT > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:91:3: note: Taking false branch
+   91 |   if (OPTIONS.OUTPUT > 0)
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:98:7: note: Assuming field 'DEBUG' is <= 0
-   98 |   if (OPTIONS.DEBUG > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:100:7: note: Assuming field 'DEBUG' is <= 0
+  100 |   if (OPTIONS.DEBUG > 0)
       |       ^~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:98:3: note: Taking false branch
-   98 |   if (OPTIONS.DEBUG > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:100:3: note: Taking false branch
+  100 |   if (OPTIONS.DEBUG > 0)
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:100:7: note: Assuming field 'COUNT' is > 0
-  100 |   if (OPTIONS.COUNT > 0) { // TODO add dest file headers
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:102:7: note: Assuming field 'COUNT' is > 0
+  102 |   if (OPTIONS.COUNT > 0) { // TODO add dest file headers
       |       ^~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:100:3: note: Taking true branch
-  100 |   if (OPTIONS.COUNT > 0) { // TODO add dest file headers
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:102:3: note: Taking true branch
+  102 |   if (OPTIONS.COUNT > 0) { // TODO add dest file headers
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:102:34: note: Passing null pointer value via 2nd parameter 'term'
-  102 |     CountOccurrences(SOURCE.PTR, TERM.STR); // TODO todo rename this
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:104:34: note: Passing null pointer value via 2nd parameter 'term'
+  104 |     CountOccurrences(SOURCE.PTR, TERM.STR); // TODO todo rename this
       |                                  ^~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:102:5: note: Calling 'CountOccurrences'
-  102 |     CountOccurrences(SOURCE.PTR, TERM.STR); // TODO todo rename this
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:104:5: note: Calling 'CountOccurrences'
+  104 |     CountOccurrences(SOURCE.PTR, TERM.STR); // TODO todo rename this
       |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/copy.h:286:5: note: Loop condition is true.  Entering loop body
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/copy.h:286:5: note: Loop condition is true.  Entering loop body
   286 |     while (1){
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/copy.h:287:40: note: Passing null pointer value via 3rd parameter 'term'
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/copy.h:287:40: note: Passing null pointer value via 3rd parameter 'term'
   287 |         if (MatchChecker(file, stdout, term) <= 0){
       |                                        ^~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/copy.h:287:13: note: Calling 'MatchChecker'
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/copy.h:287:13: note: Calling 'MatchChecker'
   287 |         if (MatchChecker(file, stdout, term) <= 0){
       |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/copy.h:53:41: note: Passing null pointer value via 2nd parameter 'term'
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/copy.h:53:41: note: Passing null pointer value via 2nd parameter 'term'
    53 |     SOURCE.POSITION  = FindNext(source, term);
       |                                         ^~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/copy.h:53:24: note: Calling 'FindNext'
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/copy.h:53:24: note: Calling 'FindNext'
    53 |     SOURCE.POSITION  = FindNext(source, term);
       |                        ^~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:394:37: note: Null pointer passed as 1st argument to string length function
-  394 |     const long long term_size     = strlen(term);//TODO CHANGE THIS TO A 
-      |                                     ^      ~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:610:14: warning: Call to 'malloc' has an allocation size of 0 bytes [clang-analyzer-optin.portability.UnixAPI]
-  610 |     buffer = malloc(range_size);
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:359:33: note: Null pointer passed as 1st argument to string length function
+  359 |     const long long term_size = strlen(term); // TODO CHANGE THIS TO A
+      |                                 ^      ~~~~
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:550:14: warning: Call to 'malloc' has an allocation size of 0 bytes [clang-analyzer-optin.portability.UnixAPI]
+  550 |     buffer = malloc(range_size);
       |              ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:22:3: note: Calling 'ParseCmdLine'
-   22 |   ParseCmdLine(argc, argv);
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:24:3: note: Calling 'ParseCmdLine'
+   24 |   ParseCmdLine(argc, argv);
       |   ^~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:38:7: note: Assuming 'argc' is >= 2
-   38 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:40:7: note: Assuming 'argc' is >= 2
+   40 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
       |       ^~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:38:3: note: Taking false branch
-   38 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:40:3: note: Taking false branch
+   40 |   if (argc < 2) { // TODO move it to helpchecker or something like that?
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:7: note: Assuming the condition is false
-   43 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:45:7: note: Assuming the condition is false
+   45 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
       |       ^~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:7: note: Left side of '||' is false
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:37: note: Assuming the condition is false
-   43 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:45:7: note: Left side of '||' is false
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:45:37: note: Assuming the condition is false
+   45 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
       |                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:43:3: note: Taking false branch
-   43 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:45:3: note: Taking false branch
+   45 |   if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0) {
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:57:21: note: 'tmp' is < 'argc'
-   57 |   for (int tmp = 1; tmp < argc; tmp++) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:59:21: note: 'tmp' is < 'argc'
+   59 |   for (int tmp = 1; tmp < argc; tmp++) {
       |                     ^~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:57:3: note: Loop condition is true.  Entering loop body
-   57 |   for (int tmp = 1; tmp < argc; tmp++) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:59:3: note: Loop condition is true.  Entering loop body
+   59 |   for (int tmp = 1; tmp < argc; tmp++) {
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:58:9: note: Assuming the condition is false
-   58 |     if (strcmp(argv[tmp], "-db") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:60:9: note: Assuming the condition is false
+   60 |     if (strcmp(argv[tmp], "-db") == 0)
       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:58:5: note: Taking false branch
-   58 |     if (strcmp(argv[tmp], "-db") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:60:5: note: Taking false branch
+   60 |     if (strcmp(argv[tmp], "-db") == 0)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:61:9: note: Assuming the condition is false
-   61 |     if (strcmp(argv[tmp], "-c") == 0 || strcmp(argv[tmp], "--count") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:63:9: note: Assuming the condition is false
+   63 |     if (strcmp(argv[tmp], "-c") == 0 || strcmp(argv[tmp], "--count") == 0)
       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:61:9: note: Left side of '||' is false
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:61:41: note: Assuming the condition is false
-   61 |     if (strcmp(argv[tmp], "-c") == 0 || strcmp(argv[tmp], "--count") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:63:9: note: Left side of '||' is false
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:63:41: note: Assuming the condition is false
+   63 |     if (strcmp(argv[tmp], "-c") == 0 || strcmp(argv[tmp], "--count") == 0)
       |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:61:5: note: Taking false branch
-   61 |     if (strcmp(argv[tmp], "-c") == 0 || strcmp(argv[tmp], "--count") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:63:5: note: Taking false branch
+   63 |     if (strcmp(argv[tmp], "-c") == 0 || strcmp(argv[tmp], "--count") == 0)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:64:9: note: Assuming the condition is false
-   64 |     if (strstr(argv[tmp], "--limiters=") != NULL)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:66:9: note: Assuming the condition is false
+   66 |     if (strstr(argv[tmp], "--limiters=") != NULL)
       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:64:5: note: Taking false branch
-   64 |     if (strstr(argv[tmp], "--limiters=") != NULL)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:66:5: note: Taking false branch
+   66 |     if (strstr(argv[tmp], "--limiters=") != NULL)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:67:9: note: Assuming the condition is false
-   67 |     if (strcmp(argv[tmp], "-l") == 0 || strcmp(argv[tmp], "--lines") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:69:9: note: Assuming the condition is false
+   69 |     if (strcmp(argv[tmp], "-l") == 0 || strcmp(argv[tmp], "--lines") == 0)
       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:67:9: note: Left side of '||' is false
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:67:41: note: Assuming the condition is false
-   67 |     if (strcmp(argv[tmp], "-l") == 0 || strcmp(argv[tmp], "--lines") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:69:9: note: Left side of '||' is false
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:69:41: note: Assuming the condition is false
+   69 |     if (strcmp(argv[tmp], "-l") == 0 || strcmp(argv[tmp], "--lines") == 0)
       |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:67:5: note: Taking false branch
-   67 |     if (strcmp(argv[tmp], "-l") == 0 || strcmp(argv[tmp], "--lines") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:69:5: note: Taking false branch
+   69 |     if (strcmp(argv[tmp], "-l") == 0 || strcmp(argv[tmp], "--lines") == 0)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:70:9: note: Assuming the condition is false
-   70 |     if (strcmp(argv[tmp], "-o") == 0 || strcmp(argv[tmp], "--output") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:72:9: note: Assuming the condition is false
+   72 |     if (strcmp(argv[tmp], "-o") == 0 || strcmp(argv[tmp], "--output") == 0)
       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:70:9: note: Left side of '||' is false
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:70:41: note: Assuming the condition is false
-   70 |     if (strcmp(argv[tmp], "-o") == 0 || strcmp(argv[tmp], "--output") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:72:9: note: Left side of '||' is false
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:72:41: note: Assuming the condition is false
+   72 |     if (strcmp(argv[tmp], "-o") == 0 || strcmp(argv[tmp], "--output") == 0)
       |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:70:5: note: Taking false branch
-   70 |     if (strcmp(argv[tmp], "-o") == 0 || strcmp(argv[tmp], "--output") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:72:5: note: Taking false branch
+   72 |     if (strcmp(argv[tmp], "-o") == 0 || strcmp(argv[tmp], "--output") == 0)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:73:9: note: Assuming the condition is false
-   73 |     if (strcmp(argv[tmp], "-p") == 0 || strcmp(argv[tmp], "--positions") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:75:9: note: Assuming the condition is false
+   75 |     if (strcmp(argv[tmp], "-p") == 0 || strcmp(argv[tmp], "--positions") == 0)
       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:73:9: note: Left side of '||' is false
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:73:41: note: Assuming the condition is false
-   73 |     if (strcmp(argv[tmp], "-p") == 0 || strcmp(argv[tmp], "--positions") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:75:9: note: Left side of '||' is false
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:75:41: note: Assuming the condition is false
+   75 |     if (strcmp(argv[tmp], "-p") == 0 || strcmp(argv[tmp], "--positions") == 0)
       |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:73:5: note: Taking false branch
-   73 |     if (strcmp(argv[tmp], "-p") == 0 || strcmp(argv[tmp], "--positions") == 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:75:5: note: Taking false branch
+   75 |     if (strcmp(argv[tmp], "-p") == 0 || strcmp(argv[tmp], "--positions") == 0)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:76:9: note: Assuming the condition is false
-   76 |     if (strstr(argv[tmp], "--range=") != NULL)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:78:9: note: Assuming the condition is false
+   78 |     if (strstr(argv[tmp], "--range=") != NULL)
       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:76:5: note: Taking false branch
-   76 |     if (strstr(argv[tmp], "--range=") != NULL)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:78:5: note: Taking false branch
+   78 |     if (strstr(argv[tmp], "--range=") != NULL)
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:79:14: note: Assuming field 'DEBUG' is not equal to 0
-   79 |     else if (OPTIONS.DEBUG == 0 && OPTIONS.COUNT == 0 &&
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:81:14: note: Assuming field 'DEBUG' is not equal to 0
+   81 |     else if (OPTIONS.DEBUG == 0 && OPTIONS.COUNT == 0 &&
       |              ^~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:79:33: note: Left side of '&&' is false
-   79 |     else if (OPTIONS.DEBUG == 0 && OPTIONS.COUNT == 0 &&
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:81:33: note: Left side of '&&' is false
+   81 |     else if (OPTIONS.DEBUG == 0 && OPTIONS.COUNT == 0 &&
       |                                 ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:57:21: note: Assuming 'tmp' is >= 'argc'
-   57 |   for (int tmp = 1; tmp < argc; tmp++) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:59:21: note: Assuming 'tmp' is >= 'argc'
+   59 |   for (int tmp = 1; tmp < argc; tmp++) {
       |                     ^~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:57:3: note: Loop condition is false. Execution continues on line 88
-   57 |   for (int tmp = 1; tmp < argc; tmp++) {
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:59:3: note: Loop condition is false. Execution continues on line 90
+   59 |   for (int tmp = 1; tmp < argc; tmp++) {
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:89:7: note: Assuming field 'OUTPUT' is <= 0
-   89 |   if (OPTIONS.OUTPUT > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:91:7: note: Assuming field 'OUTPUT' is <= 0
+   91 |   if (OPTIONS.OUTPUT > 0)
       |       ^~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:89:3: note: Taking false branch
-   89 |   if (OPTIONS.OUTPUT > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:91:3: note: Taking false branch
+   91 |   if (OPTIONS.OUTPUT > 0)
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:98:7: note: Assuming field 'DEBUG' is > 0
-   98 |   if (OPTIONS.DEBUG > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:100:7: note: Assuming field 'DEBUG' is > 0
+  100 |   if (OPTIONS.DEBUG > 0)
       |       ^~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:98:3: note: Taking true branch
-   98 |   if (OPTIONS.DEBUG > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:100:3: note: Taking true branch
+  100 |   if (OPTIONS.DEBUG > 0)
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:100:7: note: Assuming field 'COUNT' is <= 0
-  100 |   if (OPTIONS.COUNT > 0) { // TODO add dest file headers
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:102:7: note: Assuming field 'COUNT' is <= 0
+  102 |   if (OPTIONS.COUNT > 0) { // TODO add dest file headers
       |       ^~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:100:3: note: Taking false branch
-  100 |   if (OPTIONS.COUNT > 0) { // TODO add dest file headers
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:102:3: note: Taking false branch
+  102 |   if (OPTIONS.COUNT > 0) { // TODO add dest file headers
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:105:7: note: Assuming field 'LINES' is > 0
-  105 |   if (OPTIONS.LINES > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:107:7: note: Assuming field 'LINES' is > 0
+  107 |   if (OPTIONS.LINES > 0)
       |       ^~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:105:3: note: Taking true branch
-  105 |   if (OPTIONS.LINES > 0)
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:107:3: note: Taking true branch
+  107 |   if (OPTIONS.LINES > 0)
       |   ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/app.c:106:5: note: Calling 'CopyLineResults'
-  106 |     CopyLineResults(SOURCE.PTR, DEST.PTR, TERM.STR);
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/app.c:108:5: note: Calling 'CopyLineResults'
+  108 |     CopyLineResults(SOURCE.PTR, DEST.PTR, TERM.STR);
       |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/copy.h:198:9: note: 'JUST_COPY' is not equal to 1
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/copy.h:198:9: note: 'JUST_COPY' is not equal to 1
   198 |     if (JUST_COPY != 1){
       |         ^~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/copy.h:198:5: note: Taking true branch
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/copy.h:198:5: note: Taking true branch
   198 |     if (JUST_COPY != 1){
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/copy.h:203:5: note: Loop condition is true.  Entering loop body
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/copy.h:203:5: note: Loop condition is true.  Entering loop body
   203 |     while (1){
       |     ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/copy.h:204:9: note: Taking false branch
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/copy.h:204:9: note: Taking false branch
   204 |         if (MatchChecker(source, destination, term) <= 0)
       |         ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/copy.h:206:31: note: 'end_position' is <= field 'POSITION'
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/copy.h:206:31: note: 'end_position' is <= field 'POSITION'
   206 |         if (SOURCE.POSITION < end_position){
       |                               ^~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/copy.h:206:9: note: Taking false branch
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/copy.h:206:9: note: Taking false branch
   206 |         if (SOURCE.POSITION < end_position){
       |         ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/copy.h:213:30: note: Calling 'ReturnLine'
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/copy.h:213:30: note: Calling 'ReturnLine'
   213 |         const char *buffer = ReturnLine(source, SOURCE.POSITION);
       |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:687:8: note: 'begin_position' is >= 0
-  687 |     if(begin_position < 0 && end_position < 0){
-      |        ^~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:687:27: note: Left side of '&&' is false
-  687 |     if(begin_position < 0 && end_position < 0){
-      |                           ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:692:13: note: 'begin_position' is >= 0
-  692 |     else if(begin_position < 0 && end_position > position){
-      |             ^~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:692:32: note: Left side of '&&' is false
-  692 |     else if(begin_position < 0 && end_position > position){
-      |                                ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:697:13: note: 'begin_position' is >= 0
-  697 |     else if(begin_position >= 0 && end_position < 0){
-      |             ^~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:697:13: note: Left side of '&&' is true
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:697:36: note: Assuming 'end_position' is >= 0
-  697 |     else if(begin_position >= 0 && end_position < 0){
-      |                                    ^~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:697:10: note: Taking false branch
-  697 |     else if(begin_position >= 0 && end_position < 0){
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:622:9: note: 'begin_position' is >= 0
+  622 |     if (begin_position < 0 && end_position < 0) {
+      |         ^~~~~~~~~~~~~~
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:622:28: note: Left side of '&&' is false
+  622 |     if (begin_position < 0 && end_position < 0) {
+      |                            ^
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:627:14: note: 'begin_position' is >= 0
+  627 |     else if (begin_position < 0 && end_position > position) {
+      |              ^~~~~~~~~~~~~~
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:627:33: note: Left side of '&&' is false
+  627 |     else if (begin_position < 0 && end_position > position) {
+      |                                 ^
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:632:14: note: 'begin_position' is >= 0
+  632 |     else if (begin_position >= 0 && end_position < 0) {
+      |              ^~~~~~~~~~~~~~
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:632:14: note: Left side of '&&' is true
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:632:37: note: Assuming 'end_position' is >= 0
+  632 |     else if (begin_position >= 0 && end_position < 0) {
+      |                                     ^~~~~~~~~~~~~~~~
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:632:10: note: Taking false branch
+  632 |     else if (begin_position >= 0 && end_position < 0) {
       |          ^
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:707:20: note: Calling 'ReturnPositionRange'
-  707 |     char *buffer = ReturnPositionRange(file, 
-      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
-  708 |                                        begin_position, 
-      |                                        ~~~~~~~~~~~~~~~
-  709 |                                        end_position);
-      |                                        ~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:607:5: note: 'range_size' initialized to 0
-  607 |     const  long long  range_size       = ((end_position - begin_position) + 1); 
-      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/vini/Desktop/GIT-GH/OldRetriever/LINTERS_CHECK/../src/modules/search.h:610:14: note: Call to 'malloc' has an allocation size of 0 bytes
-  610 |     buffer = malloc(range_size);
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:642:20: note: Calling 'ReturnPositionRange'
+  642 |     char *buffer = ReturnPositionRange(file, begin_position, end_position);
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:547:5: note: 'range_size' initialized to 0
+  547 |     const long long range_size = ((end_position - begin_position) + 1);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/vini/Desktop/GIT-GH/OldRetriever-git/OldRetriever/LINTERS_CHECK/../src/modules/search.h:550:14: note: Call to 'malloc' has an allocation size of 0 bytes
+  550 |     buffer = malloc(range_size);
       |              ^      ~~~~~~~~~~

@@ -1,24 +1,24 @@
 ..\src\app.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
 
 ^
-..\src\modules\output.c:42:5: error: Common realloc mistake: 'output_buffer' nulled but not freed upon failure [memleakOnRealloc]
+..\src\modules\output.c:47:5: error: Common realloc mistake: 'output_buffer' nulled but not freed upon failure [memleakOnRealloc]
     output_buffer = realloc(output_buffer, OUTPUT_MAX);
     ^
-..\src\modules\search.h:175:5: error: Common realloc mistake: 'good_suffix_ptr' nulled but not freed upon failure [memleakOnRealloc]
+..\src\modules\output.c:54:9: error: Common realloc mistake: 'output_buffer' nulled but not freed upon failure [memleakOnRealloc]
+        output_buffer = realloc(output_buffer, output_size);
+        ^
+..\src\modules\search.h:163:5: error: Common realloc mistake: 'good_suffix_ptr' nulled but not freed upon failure [memleakOnRealloc]
     good_suffix_ptr = realloc(good_suffix_ptr, sizeof(g_suffix_table));
     ^
-..\src\modules\search.h:250:15: error: Null pointer dereference: buffer [nullPointer]
-        fread(buffer, 1, (TERM.LENGHT -1), file);
-              ^
-..\src\modules\search.h:242:21: note: Assignment 'buffer=NULL', assigned value is 0
-    char * buffer = NULL;
-                    ^
-..\src\modules\search.h:250:15: note: Null pointer dereference
-        fread(buffer, 1, (TERM.LENGHT -1), file);
-              ^
-..\src\modules\search.h:250:15: error: Null pointer dereference [nullPointer]
-        fread(buffer, 1, (TERM.LENGHT -1), file);
-              ^
-..\src\modules\search.h:130:57: warning: Uninitialized variable: f [uninitvar]
-        if (i > g && suffix_table[i + term_lenght - 1 - f] < i - g)
-                                                        ^
+..\src\modules\search.h:229:19: error: Null pointer dereference: buffer [nullPointer]
+        if (fread(buffer, 1, (TERM.LENGHT - 1), file) != 0) {
+                  ^
+..\src\modules\search.h:221:20: note: Assignment 'buffer=NULL', assigned value is 0
+    char *buffer = NULL;
+                   ^
+..\src\modules\search.h:229:19: note: Null pointer dereference
+        if (fread(buffer, 1, (TERM.LENGHT - 1), file) != 0) {
+                  ^
+..\src\modules\search.h:229:19: error: Null pointer dereference [nullPointer]
+        if (fread(buffer, 1, (TERM.LENGHT - 1), file) != 0) {
+                  ^

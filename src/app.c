@@ -23,7 +23,7 @@ struct options_status OPTIONS;
 int main(int argc, char **argv) {
   ParseCmdLine(argc, argv);
 
-  return (0);
+  return TRUE;
 }
 
 /***********************************************************
@@ -58,7 +58,7 @@ void ParseCmdLine(int argc, char *argv[]) {
   // TODO combine --positions with other options
   for (int tmp = 1; tmp < argc; tmp++) {
     if (strcmp(argv[tmp], "-db") == 0)
-      OPTIONS.DEBUG = true;
+      OPTIONS.DEBUG = TRUE;
 
     if (strcmp(argv[tmp], "-c") == 0 || strcmp(argv[tmp], "--count") == 0)
       OPTIONS.COUNT = tmp;

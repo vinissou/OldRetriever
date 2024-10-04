@@ -217,28 +217,31 @@ long long BoyerMooreFile(char *term, FILE *file,
     int i = 0; //
     long long position = ftell(file);
     char *buffer = NULL;
-    char *text = "TEMP";
+    char *text = "TEMP"; //???
 
     if (TERM.CHECK == 1)
         InitTerm(term);
 
     while (position <= file_size - TERM.LENGHT) {
         fseek(file, position, SEEK_SET);
-        fread(buffer, 1, (TERM.LENGHT - 1), file);
-        for (i = TERM.LENGHT - 1; i >= 0 && term[i] == text[i + position]; --i)
-            ; // TODO fix this
-        if (i < 0) {
-            /* MATCH_COUNT++; //TODO tirar daqui*/
-            fseek(file, position, SEEK_SET);
-            return position;
-        } else
-            position +=
-                MAX(good_suffix_ptr[i],
-                    bad_char_table[(int)text[i + position]] // TODO fix this
-                        - TERM.LENGHT + 1 + i);
+        if (fread(buffer, 1, (TERM.LENGHT - 1), file) != 0) {
+            for (i = TERM.LENGHT - 1; i >= 0 && term[i] == text[i + position];
+                 --i)
+                ; // TODO fix this
+            if (i < 0) {
+                /* MATCH_COUNT++; //TODO tirar daqui*/
+                fseek(file, position, SEEK_SET);
+                return position;
+            } else
+                position +=
+                    MAX(good_suffix_ptr[i],
+                        bad_char_table[(int)text[i + position]] // TODO fix this
+                            - TERM.LENGHT + 1 + i);
+        } else {
+            return ENOENT;
+        }
     }
-
-    return -1;
+    return -1; // I don't remember why this return -1 >> TODO check it
 }
 
 /***********************************************************

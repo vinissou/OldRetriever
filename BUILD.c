@@ -13,6 +13,7 @@
  *      run the executable if it was compressed in Windows
  * TODO add current envoriment checks (compilers, libraries,
  *      etc)
+ * TODO add msbuild? cl /O2 /TC /Wall /analyze?
  * Creator: Vinícius Souza
  * Site:    https://github.com/vinissou
  ***********************************************************/

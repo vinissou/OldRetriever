@@ -25,7 +25,7 @@ jobs:
       run: cc ./BUILD.c && ./a.out
 
     - name: Test
-      working-directory: ${{github.workspace}}
+      #working-directory: ${{github.workspace}}
       # Execute tests defined by the CMake configuration.
       #run: chmod -x ./build/retriever && ./build/retriever  --help 
       run: ${{github.workspace}}/build/retriever  --help 

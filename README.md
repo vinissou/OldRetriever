@@ -1,4 +1,4 @@
-[![Linux build test](https://github.com/vinissou/OldRetriever/actions/workflows/linux_test.yml/badge.svg)](https://github.com/vinissou/OldRetriever/actions/workflows/linux_test.yml)        [![Windows Build Test](https://github.com/vinissou/OldRetriever/actions/workflows/win_build.yml/badge.svg)](https://github.com/vinissou/OldRetriever/actions/workflows/win_build.yml)
+[![Linux Build test](https://github.com/vinissou/OldRetriever/actions/workflows/linux_test.yml/badge.svg)](https://github.com/vinissou/OldRetriever/actions/workflows/linux_test.yml) [![Windows Build Test](https://github.com/vinissou/OldRetriever/actions/workflows/win_build.yml/badge.svg)](https://github.com/vinissou/OldRetriever/actions/workflows/win_build.yml)
 
 # OldRetriever
 

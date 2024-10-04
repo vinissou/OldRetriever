@@ -44,9 +44,10 @@ void SendToOutput(FILE *file, const char *fmt, ...) // eliminate it?
     va_end(arg);
 
     if (output_size < OUTPUT_MAX) {
-        //int *tmp = realloc(output_buffer, output_size);
-        realloc(output_buffer, output_size);
-        //free(tmp);
+        int *old_ptr = realloc(output_buffer, output_size);
+        if (output_buffer == NULL) {
+            free(old_ptr);
+        }
     }
 
     // TODO fix this VVV change it to a flag??
@@ -55,7 +56,6 @@ void SendToOutput(FILE *file, const char *fmt, ...) // eliminate it?
     if (file != NULL) {
         fprintf(file, "%s", output_buffer);
     }
-    free(output_buffer);
 }
 
 /***********************************************************

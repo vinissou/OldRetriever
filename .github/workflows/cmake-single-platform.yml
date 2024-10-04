@@ -26,7 +26,7 @@ jobs:
 
     - name: Test
       #working-directory: ${{github.workspace}}
-      # Execute tests defined by the CMake configuration.
+      # TODO add an advance search test later
       run: ./build/retriever --help 
-      #run: find 
+   
 

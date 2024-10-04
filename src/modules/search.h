@@ -21,6 +21,8 @@
 /* TODO TODO CREATE CALLER FUNCTIONS TO CALL INIT_TERM AND TODO TODO*/
 /* TODO TODO THE OTHER FUNCTIONS                           TODO TODO*/
 
+// TODO deal with all the ENOENT here 
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -304,15 +306,16 @@ long long HorspoolFile(FILE *file, const long long file_size, const char *term,
 
         if (term[term_lenght - 1] == current_char) {
             fseek(file, position, SEEK_SET);
-            fread(buffer, 1, (term_lenght - 1), file);
-
-            if (memcmp(term, buffer, term_lenght - 1) == 0) {
-                /* MATCH_COUNT++;//TODO tirar daqui*/
-                // PxSITION = position;//TODO change all this
-                return position;
+            if (fread(buffer, 1, (term_lenght - 1), file) != 0) {
+                if (memcmp(term, buffer, term_lenght - 1) == 0) {
+                    /* MATCH_COUNT++;//TODO tirar daqui*/
+                    // PxSITION = position;//TODO change all this
+                    return position;
+                }
             }
+        } else {
+            return ENOENT;
         }
-
         position += bad_char_table[(int)current_char];
     }
 

@@ -1,5 +1,5 @@
 # This a modified: https://github.com/actions/starter-workflows/blob/main/ci/cmake-multi-platform.yml
-name: Linux build test
+name: Linux Build test
 
 on:
   push:

@@ -37,7 +37,7 @@ short int  OUTPUT_RETURN = 0; //implement return option
 
 /* Make this work with buffered chunks*/
 //TODO this is used in copy.h, FIX THIS >>> copy it there
-char *ReturnOutput(FILE *file, const char *fmt, ...) //eliminate it? 
+char *SendToOutput(FILE *file, const char *fmt, ...) //eliminate it? 
 {
     char *output_buffer = malloc(OUTPUT_MAX);
     unsigned long long output_size = 0;

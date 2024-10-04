@@ -92,7 +92,7 @@ void CopyPositions(FILE *source,
         if (MatchChecker(source, destination, term) <= 0)
             break;
         
-        ReturnOutput(destination,"\n%lld", SOURCE.POSITION);
+        SendToOutput(destination,"\n%lld", SOURCE.POSITION);
         AdvanceFile(source, 1);
     }
 }
@@ -159,11 +159,11 @@ void CopyLimitersResults(FILE *source,
            char *buffer = ReturnLimitersRange(source, position  
                                              ,first_limiter ,last_limiter);
            if (JUST_COPY != 1){
-               ReturnOutput(destination, "\nPosition %lld to %lld:\n%s"
+               SendToOutput(destination, "\nPosition %lld to %lld:\n%s"
                                   ,begin_position  ,end_position ,buffer);
            }
            else{
-                ReturnOutput(destination, "\n%s",buffer);
+                SendToOutput(destination, "\n%s",buffer);
            }
        }
        AdvanceFile(source, 1);
@@ -215,12 +215,12 @@ void CopyLineResults(FILE *source,
         end_position   = NextPosition(source, "\n");
         begin_position = (end_position - ((long long) strlen(buffer)));
         if (JUST_COPY != 1){
-            ReturnOutput(destination 
+            SendToOutput(destination 
                         ,"\nLine from the position %lld to %lld:\n%s"
                         ,begin_position ,end_position ,buffer);
         }
         else{
-            ReturnOutput(destination, "\n%s",buffer);
+            SendToOutput(destination, "\n%s",buffer);
         }
 
         ReturnResults(SOURCE.POSITION, TERM.MATCHES);
@@ -266,11 +266,11 @@ void CopyRangeResults(FILE *source,
                                                 ,begin_position 
                                                 ,end_position);
         if (JUST_COPY != 1){
-            ReturnOutput(destination ,"\nPosition %lld to %lld:\n%s" 
+            SendToOutput(destination ,"\nPosition %lld to %lld:\n%s" 
                                 ,begin_position ,end_position ,buffer);
         }
         else{
-            ReturnOutput(destination, "\n%s", buffer);
+            SendToOutput(destination, "\n%s", buffer);
         }
         
         AdvanceFile(source, term_lenght);//TODO it's really necessary???

@@ -22,7 +22,7 @@ jobs:
 
     - name: Build
       # Build your program with the given configuration
-      run: apt install dos2unix && cc ./BUILD.c && ./a.out
+      run: sudo apt install dos2unix && cc ./BUILD.c && ./a.out
 
     - name: Test
       #working-directory: ${{github.workspace}}

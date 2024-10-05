@@ -32,19 +32,19 @@ short int  OUTPUT_STDOUT = 0;
 short int  OUTPUT_RETURN = 0; //implement return option
 
 //TODO VVV does it need to be static???
-static char *output_buffer = NULL;
+//static char *output_buffer = NULL;
 
 
 
 
 /* Make this work with buffered chunks*/
 //TODO this is used in copy.h, FIX THIS >>> copy it there
-char *ReturnOutput(FILE *file, const char *fmt, ...) //eliminate it? 
+void ReturnOutput(FILE *file, const char *fmt, ...) //eliminate it? 
 {
     unsigned long long output_size = 0;
     va_list arg;
 
-    output_buffer = realloc(output_buffer, OUTPUT_MAX);
+    char *output_buffer = malloc(OUTPUT_MAX);
 
     va_start(arg, fmt);
     output_size = vsnprintf(output_buffer, OUTPUT_MAX, fmt, arg);
@@ -52,6 +52,9 @@ char *ReturnOutput(FILE *file, const char *fmt, ...) //eliminate it?
 
     if(output_size < OUTPUT_MAX){
         output_buffer = realloc(output_buffer, output_size);
+        if (output_buffer == NULL){
+            free(output_buffer);
+        }
     }
     
     //TODO fix this VVV change it to a flag??
@@ -61,7 +64,7 @@ char *ReturnOutput(FILE *file, const char *fmt, ...) //eliminate it?
         fprintf(file ,"%s" ,output_buffer);
     }
 
-    return output_buffer;
+    free(output_buffer);
 }
 
 

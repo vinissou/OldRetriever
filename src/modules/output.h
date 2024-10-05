@@ -36,7 +36,7 @@ extern short int  OUTPUT_RETURN;
 
 
 /* FUNCTIONS */
-extern char *ReturnOutput(FILE *file, const char *fmt, ...);
+extern void ReturnOutput(FILE *file, const char *fmt, ...);
 extern void NotFound(FILE *file, const char *term);
 extern void ReturnResults(const long long position, const long long find_count);
 extern void ReturnTotal(FILE *file, const long long find_count);

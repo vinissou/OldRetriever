@@ -1,0 +1,111 @@
+name: "cppcheck-action"
+author: deep5050
+description: "Find potential vulnerabilities in your C/C++ codes"
+
+inputs:
+  github_token:
+    description: "GITHUB_TOKEN secret < automatically provided by Github , you don't need to set up >"
+    required: true
+    
+  # github_username:
+  #   description: GitHub account name
+  #   default: "cppcheck-action"
+  # github_email:
+  #   description: GitHub account email
+  #   default: "cppcheck-action@master"
+  # commit_msg:
+  #   description: custom commit message
+  #   default: "cppcheck report added or updated"
+
+  check_library:
+    description: "Show information messages when library files have info."
+    default: "disable"
+    required: false
+
+  skip_preprocessor:
+    description: "Print preprocessor output on stdout and don't do any further processing."
+    default: "disable"
+    required: false
+
+  enable:
+    description: "Enable additional checks"
+    default: "all"
+    required: false
+
+  exclude_check:
+    description: "Give a source file or source file directory to exclude from the check"
+    default: "disable"
+    required: false
+
+  inconclusive:
+    description: " Allow that Cppcheck reports even though the analysis is inconclusive."
+    default: "enable"
+    required: false
+
+  inline_suppression:
+    description: "Enable inline suppressions"
+    default: "disable"
+    required: false
+
+  force_language:
+    description: "Forces cppcheck to check all files as the given language"
+    default: "disable"
+    required: false
+
+  force:
+    description: "Force checking of all configurations in files"
+    default: "disable"
+    required: false
+
+  max_ctu_depth:
+    description: "Max depth in whole program analysis"
+    default: "disable"
+    required: false
+
+  platform:
+    description: "Specifies platform specific types and sizes"
+    default: "disable"
+    required: false
+
+  std:
+    description: "Set the C/C++ standard"
+    default: "c++20"
+    required: false
+
+  output_file:
+    description: "file where the result to be dumped"
+    default: "cppcheck_report.txt"
+    required: false
+
+  target_branch:
+    description: "Branch that the badge will target. Defaults to the current branch."
+    default: ""
+    required: false
+
+  other_options:
+    description: "Any other options you want to add, separate with a space, wrong options will cause a failure"
+    default: "disable"
+    required: false
+
+  pull_request_branch:
+    description: "Branch that the action will target on pull_request. Defaults to GITHUB_BASE_REF."
+    default: ""
+    required: false
+
+  target_repository:
+    description: "Repository that the report will be pushed on. Defaults to the current repository."
+    default: ""
+    required: false
+
+  pull_request_repository:
+    description: "Repository that the action will target on pull_request. Defaults to TARGET_REPOSITORY"
+    default: ""
+    required: false
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+
+branding:
+  icon: "check-circle"
+  color: "red"

@@ -1,4 +1,5 @@
-# 
+# Cppcheck always return true if can find the file 
+# TODO find a way to fail this test if there are warnings
 name: Cppcheck test
 
 on:

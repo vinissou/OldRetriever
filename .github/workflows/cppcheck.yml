@@ -20,9 +20,9 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-  #  - name: Build
-  #    # Build your program with the given configuration
-  #    run: sudo apt install dos2unix && cc ./BUILD.c && ./a.out
+    - name: Build
+      # Build your program with the given configuration
+      run: sudo apt install cppcheck
 
     - name: Test
       #working-directory: ${{github.workspace}}

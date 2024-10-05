@@ -43,6 +43,7 @@ void ReturnOutput(FILE *file, const char *fmt, ...) //eliminate it?
 {
     unsigned long long output_size = 0;
     va_list arg;
+    int  *tmp_ptr = NULL;
 
     char *output_buffer = malloc(OUTPUT_MAX);
 
@@ -51,10 +52,7 @@ void ReturnOutput(FILE *file, const char *fmt, ...) //eliminate it?
     va_end(arg);
 
     if(output_size < OUTPUT_MAX){
-        output_buffer = realloc(output_buffer, output_size);
-        if (output_buffer == NULL){
-            free(output_buffer);
-        }
+        tmp_ptr = realloc(output_buffer, output_size);
     }
     
     //TODO fix this VVV change it to a flag??
@@ -64,7 +62,7 @@ void ReturnOutput(FILE *file, const char *fmt, ...) //eliminate it?
         fprintf(file ,"%s" ,output_buffer);
     }
 
-    free(output_buffer);
+    free(tmp_ptr);
 }
 
 

@@ -23,7 +23,7 @@ struct options_status OPTIONS;
 int main(int argc, char **argv) {
   ParseCmdLine(argc, argv);
 
-  return TRUE;
+  return 0;
 }
 
 /***********************************************************

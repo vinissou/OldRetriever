@@ -224,7 +224,7 @@ long long BoyerMooreFile(char *term, FILE *file,
 {
     int i = 0; //
     long long position = ftell(file);
-    char *buffer = NULL;
+    char *buffer = malloc(TERM.LENGHT);
     char *text = "TEMP"; //???
 
     if (TERM.CHECK == 1)

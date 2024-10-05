@@ -27,6 +27,6 @@ jobs:
     - name: Test
       #working-directory: ${{github.workspace}}
       # TODO add an advance search test later
-      run: ./build/retriever --help 
+      run: ./build/retriever -l 'vinissou' src/app.c
    
 

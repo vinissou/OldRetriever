@@ -48,6 +48,6 @@ jobs:
       run: clang BUILD.c && .\a.exe
 
     - name: testing executable
-      run: .\build\retriever --help
+      run: .\build\retriever -l 'vinissou' .\src\app.c
 
 

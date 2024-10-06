@@ -4,10 +4,6 @@
 # documentation.
 
 
-# I tried to test with CL, but installing these VS tools are always a pain in the ass
-# and chocolatey seems to be down all the time, so even searching the packages is annoying
-# so I just used clang for now 
-
 name: Windows Build Test
 
 on:
@@ -34,19 +30,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-
-   # - name: Restore NuGet packages
-   #  working-directory: ${{env.GITHUB_WORKSPACE}}
-   #  run: nuget restore ${{env.SOLUTION_FILE_PATH}}
-   # - name: Install-CL
-   #   run: choco install visualstudio2019-workload-nativedesktop
-    - name: Build
-      working-directory: ${{env.GITHUB_WORKSPACE}}
-      # Add additional options to the MSBuild command line here (like platform or verbosity level).
-      # See https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference
-      #run: msbuild /m /p:Configuration=${{env.BUILD_CONFIGURATION}} ${{env.SOLUTION_FILE_PATH}}
+    - uses: ilammy/msvc-dev-cmd@v1.4.1
+    - name: Build with VS-C++
+      run: cl BUILD.c && .\a.exe -cl
+    - name: testing CL executable
+      run: .\build\retriever -l 'vinissou' .\src\app.c
+      #working-directory: ${{env.GITHUB_WORKSPACE}}
+    - name: Build-Clang
       run: clang BUILD.c && .\a.exe
-
     - name: testing executable
       run: .\build\retriever -l 'vinissou' .\src\app.c
 

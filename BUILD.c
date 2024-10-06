@@ -13,7 +13,7 @@
  *      run the executable if it was compressed in Windows
  * TODO add current envoriment checks (compilers, libraries,
  *      etc)
- * TODO add msbuild? cl /O2 /TC /Wall /analyze?
+ * TODO this is getting really ugly, it needs some refactoring
  * Creator: Vinícius Souza
  * Site:    https://github.com/vinissou
  ***********************************************************/
@@ -22,32 +22,73 @@
 #include <stdlib.h>
 #include <string.h>
 #include <sys/stat.h>
+//  silent mode will default to gcc in Windows?
+//  TODO auto compiler list funtion among available
 
-// this will become a compiler selector in the future
-// might add cl one day
 #if defined(_WIN32) || defined(_WIN64)
-char *compiler = "clang";
 char *os = "WIN32";
-char *input = ".\\src\\app.c";
-char *output = ".\\build\\retriever.exe";
-#else // for now
-char *compiler = "cc";
+#else
 char *os = "else"; // for now
-char *input = "./src/app.c";
-char *output = "./build/retriever";
 #endif
 
-int main(int argc, char **argv) {
-    char command[200];
+char *Args(int argc, char **argv);
 
-    if (strcmp(os, "WIN32") != 0) {
-        system("dos2unix *"); // TODO make it portable
-        system("dos2unix modules/*");
+int main(int argc, char **argv) {
+
+    char *mode = Args(argc, argv);
+    printf("\n\n %s \n\n", mode);
+
+    // testing for future auto-select
+    if (strcmp(mode, "--auto") == 0) {
+        printf("\n gcc: %d\n", system("gcc --help"));
+        printf("\n gcc: %d\n", system("gcc"));
     }
 
-    sprintf(command, "%s -Wall -Wextra -Werror -pedantic -std=c99 -O3 %s -o %s",
-            compiler, input, output);
+    // turn this into a struct
+    char *compiler = NULL;
+    char *flags = NULL;
+    char *input = NULL;
+    char *output = NULL;
+
+    if (strcmp(os, "WIN32") == 0) {
+        if (strcmp(mode, "-cl") == 0) {
+            compiler = "cl"; // TODO improve this
+            input = ".\\src\\app.c";
+            flags = "/O2 /Wall /analyze"; // don't use /TC
+            output = "/Fe:build\\retriever.exe /Fo:build\\retriever.obj";
+        } else {
+            compiler = "clang";
+            input = ".\\src\\app.c";
+            flags = "-Wall -Wextra -Werror -pedantic -std=c99 -O3";
+            output = "-o .\\build\\retriever.exe";
+        }
+    } else {
+        system("dos2unix *"); // TODO make it portable
+        system("dos2unix modules/*");
+        compiler = "cc";
+        input = "./src/app.c";
+        output = "-o ./build/retriever";
+        flags = "-Wall -Wextra -Werror -pedantic -std=c99 -O3";
+    }
+
+    if (compiler == NULL) {
+        printf("\n COMPILER: %s NOT FOUND\n", compiler);
+        return EXIT_FAILURE;
+    }
+
+    char command[500];
+    sprintf(command, "%s %s %s %s", compiler, flags, input, output);
     printf("\n%s\n", command);
     system(command);
-    return 0;
+    return EXIT_SUCCESS;
+}
+
+// this will be expanded, for now is just preventing a segfaul in
+// silent mode
+char *Args(int argc, char **argv) {
+    if (argc >= 2) {
+        return argv[1];
+    } else {
+        return "NO_ARGS";
+    }
 }

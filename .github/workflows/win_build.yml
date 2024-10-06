@@ -34,11 +34,11 @@ jobs:
     - name: Build with VS-C++
       run:  cl BUILD.c && ./BUILD.exe -cl
     - name: testing CL executable
-      run: .\build\retriever -l 'vinissou' .\src\app.c
+      run: .\build\retriever -l "vinissou" .\src\app.c
       #working-directory: ${{env.GITHUB_WORKSPACE}}
     - name: Build-Clang
       run:  clang BUILD.c && ./a.exe
     - name: testing executable
-      run: .\build\retriever -l 'vinissou' .\src\app.c
+      run: .\build\retriever -l "vinissou" .\src\app.c
 
 

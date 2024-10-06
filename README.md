@@ -19,6 +19,7 @@ In Windows, Linux or BSDs¹, just compile BUILD.c and run it.
 More systems will be added later.
 
 For building on Windows: I recommend using the mingw-winlibs-llvm-ucrt package from Scoop, it's the most painless way to install compilers on Windows. 
+But it supports the MSVC compiler with the -cl flag in the builder program.
 
 ¹NetBSD and OpenBSD have some minor I/O problems that I'm working on.
 
